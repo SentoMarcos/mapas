@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mapa de Hitos en la Dirección Musical</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="estilos-mapas.css" />
+</head>
+
+<body>
+  <h2>Orígenes geográficos clave de la dirección musical</h2>
+
+  <div class="timeline">
+    <h3>Línea del tiempo de la dirección orquestal</h3>
+    <div class="timeline-track">
+
+  <!-- ANTIGUA GRECIA Y EDAD MEDIA -->
+  <div class="periodo era-medieval">
+    <span class="periodo-fecha" aria-hidden="true">Antigua Grecia / Edad Media</span>
+    <h4>Antigua Grecia y Edad Media – La quironimia</h4>
+    <ul>
+      <li>Antes de la batuta, se dirigía con las manos.</li>
+      <li>En el canto gregoriano, los líderes usaban gestos manuales (quironimia) para indicar:</li>
+      <ul>
+        <li>Altura aproximada de las notas (sube/baja).</li>
+        <li>Flujo del ritmo y frases musicales.</li>
+      </ul>
+      <li>No existían compases modernos; era un lenguaje gestual para guiar al coro.</li>
+    </ul>
+  </div>
+
+  <!-- SIGLO XVII -->
+  <div class="periodo era-renaissance">
+    <span class="periodo-fecha" aria-hidden="true">Siglo XVII</span>
+    <h4>Siglo XVII – El “bastón” del Barroco</h4>
+    <ul>
+      <li>Jean-Baptiste Lully populariza un bastón largo y pesado en la corte de Luis XIV.</li>
+      <li>Golpea el suelo para marcar el tempo a grandes conjuntos.</li>
+      <li>Un método:</li>
+      <ul>
+        <li>Muy rítmico y contundente.</li>
+        <li>Bastante ruidoso.</li>
+        <li>Peligroso: un golpe accidental en su pie le causó gangrena y la muerte.</li>
+      </ul>
+    </ul>
+  </div>
+
+  <!-- INICIOS SIGLO XIX -->
+  <div class="periodo era-classical">
+    <span class="periodo-fecha" aria-hidden="true">Inicios s. XIX</span>
+    <h4>Inicios del Siglo XIX – Dirección desde el instrumento</h4>
+    <ul>
+      <li>El director solía ser el primer violín o el clavecinista.</li>
+      <li>Dirigía mientras tocaba:</li>
+      <ul>
+        <li>Movimientos marcados del arco.</li>
+        <li>Gestos de cabeza y mirada para entradas.</li>
+      </ul>
+      <li>La figura del director independiente aún no existía.</li>
+    </ul>
+  </div>
+
+  <!-- 1820 -->
+  <div class="periodo era-classical">
+    <span class="periodo-fecha" aria-hidden="true">c. 1820</span>
+    <h4>c. 1820 – Nace la batuta moderna</h4>
+    <ul>
+      <li>Louis Spohr y Felix Mendelssohn estandarizan la batuta ligera de madera.</li>
+      <li>El director deja de tocar para dirigir exclusivamente.</li>
+      <li>Se coloca en un podio frente a la orquesta.</li>
+      <li>Da la espalda al público para centrarse en los músicos.</li>
+      <li>Nace la figura moderna del director.</li>
+    </ul>
+  </div>
+
+  <!-- FINALES SIGLO XIX -->
+  <div class="periodo era-modern">
+    <span class="periodo-fecha" aria-hidden="true">Finales s. XIX</span>
+    <h4>Finales del Siglo XIX – El director como intérprete-artista</h4>
+    <ul>
+      <li>Con Wagner y Mahler, dirigir ya no es solo marcar el tempo.</li>
+      <li>El director pasa a:</li>
+      <ul>
+        <li>Moldear matices, rubato y expresividad.</li>
+        <li>Controlar la intensidad emocional.</li>
+        <li>Ofrecer su propia visión de la obra.</li>
+      </ul>
+      <li>Nace el culto al “Maestro”.</li>
+    </ul>
+  </div>
+
+  <!-- SIGLO XX -->
+  <div class="periodo era-modern">
+    <span class="periodo-fecha" aria-hidden="true">Siglo XX</span>
+    <h4>Siglo XX – La era de los titanes y la grabación</h4>
+    <ul>
+      <li>Surgen grandes directores: Toscanini, Karajan, Bernstein…</li>
+      <li>La grabación exige:</li>
+      <ul>
+        <li>Precisión extrema.</li>
+        <li>Repetibilidad.</li>
+      </ul>
+      <li>Se profesionaliza la técnica gestual:</li>
+      <ul>
+        <li>Independencia de manos.</li>
+        <li>Claridad rítmica.</li>
+        <li>Vocabulario gestual codificado.</li>
+      </ul>
+    </ul>
+  </div>
+
+  <!-- SIGLO XXI -->
+  <div class="periodo era-contemporary">
+    <span class="periodo-fecha" aria-hidden="true">Siglo XXI</span>
+    <h4>Siglo XXI – Diversidad y tecnología</h4>
+    <ul>
+      <li>Aumenta la diversidad en los podios: más mujeres y más países representados.</li>
+      <li>Ejemplos: Alondra de la Parra, Marin Alsop, Gustavo Dudamel.</li>
+      <li>La dirección se integra con la tecnología audiovisual:</li>
+      <ul>
+        <li>Uso de click-tracks para cine, videojuegos y espectáculos multimedia.</li>
+        <li>Directores especializados en música para pantalla.</li>
+      </ul>
+    </ul>
+  </div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([20, 0], 2);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 18,
+      attribution: '© OpenStreetMap, © Carto'
+    }).addTo(map);
+
+    var puntos = [
+      {
+        coords: [48.80, 2.12],
+        texto: "<b>Versalles, Francia</b><br>Jean-Baptiste Lully y el bastón barroco."
+      },
+      {
+        coords: [51.34, 12.37],
+        texto: "<b>Leipzig, Alemania</b><br>Mendelssohn y la batuta moderna."
+      },
+      {
+        coords: [48.21, 16.37],
+        texto: "<b>Viena, Austria</b><br>Johann Strauss dirige con el violín en mano (‘Stehgeiger’)."
+      },
+      {
+        coords: [49.95, 11.58],
+        texto: "<b>Bayreuth, Alemania</b><br>Wagner y el foso invisible."
+      },
+      {
+        coords: [10.48, -66.90],
+        texto: "<b>Caracas, Venezuela</b><br>‘El Sistema’ y la renovación social mediante dirección orquestal."
+      }
+    ];
+
+    puntos.forEach(p => L.marker(p.coords).addTo(map).bindPopup(p.texto));
+  </script>
+</body>
+</html>

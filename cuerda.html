@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mapa de instrumentos de cuerda</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="estilos-mapas.css" />
+</head>
+
+<body>
+  <h2>Orígenes geográficos de los instrumentos de cuerda</h2>
+  
+  <div class="timeline">
+    <h3>Línea del tiempo de los instrumentos de cuerda</h3>
+    <div class="timeline-track">
+
+  <!-- ANTIGÜEDAD -->
+  <div class="periodo era-ancient">
+    <span class="periodo-fecha" aria-hidden="true">c. 3000–1000 a.C.</span>
+    <h4>c. 3000–1000 a.C. – Mesopotamia y Egipto</h4>
+    <ul>
+      <li>Aparecen las primeras liras sumerias y arpas egipcias.</li>
+      <li>Ceremonias funerarias y música en templos para comunicarse con los dioses.</li>
+      <li>Construcción: cajas de resonancia de madera, cuerdas de tripa y decoración simbólica.</li>
+    </ul>
+  </div>
+
+  <div class="periodo era-ancient">
+    <span class="periodo-fecha" aria-hidden="true">c. 1000–300 a.C.</span>
+    <h4>c. 1000–300 a.C. – Grecia antigua</h4>
+    <ul>
+      <li>Lira y kithara asociadas al dios Apolo.</li>
+      <li>Usos: ritos religiosos, acompañamiento de poesía, filosofía y celebraciones.</li>
+      <li>La música se considera medio para armonizar alma, cuerpo y cosmos.</li>
+    </ul>
+  </div>
+
+  <!-- EDAD ANTIGUA Y ALTA EDAD MEDIA -->
+  <div class="periodo era-ancient">
+    <span class="periodo-fecha" aria-hidden="true">Edad Antigua / Alta Edad Media</span>
+    <h4>Edad Antigua y Alta Edad Media: pueblos celtas, escitas y nórdicos</h4>
+    <ul>
+      <li>Bardos y poetas usan liras para conservar memoria de batallas y genealogías.</li>
+      <li>Exaltan héroes, reyes y legitiman poder político.</li>
+      <li>La música narra el heroísmo, aunque no participa en la batalla.</li>
+    </ul>
+  </div>
+
+  <div class="periodo era-ancient">
+    <span class="periodo-fecha" aria-hidden="true">China antigua</span>
+    <h4>China antigua</h4>
+    <ul>
+      <li>Instrumentos como guqin y guzheng.</li>
+      <li>Usos: ceremonias militares previas, música disciplinaria y canciones de campañas militares.</li>
+    </ul>
+  </div>
+
+  <!-- EDAD MEDIA -->
+  <div class="periodo era-medieval">
+    <span class="periodo-fecha" aria-hidden="true">Europa medieval (s. IX–XIV)</span>
+    <h4>Europa medieval (s. IX–XIV)</h4>
+    <ul>
+      <li>Zanfona (hurdy-gurdy), laúdes primitivos, salterios.</li>
+      <li>Acompañan historias épicas, crónicas orales y poesía de juglares y trovadores.</li>
+      <li>Arpas y salterios en música devocional cristiana.</li>
+      <li>Lira nórdica para sagas islandesas de tradición vikinga.</li>
+    </ul>
+  </div>
+
+  <!-- RENACIMIENTO -->
+  <div class="periodo era-renaissance">
+    <span class="periodo-fecha" aria-hidden="true">Renacimiento s. XV–XVI</span>
+    <h4>Renacimiento (s. XV–XVI) – El laúd y el poder cortesano</h4>
+    <ul>
+      <li>El laúd se convierte en el instrumento estrella de Europa.</li>
+      <li>Símbolo de refinamiento, educación y estatus.</li>
+      <li>Usos: banquetes, poesía, danza, diplomacia y celebraciones de corte.</li>
+      <li>Se desarrollan técnicas complejas y notaciones específicas.</li>
+    </ul>
+  </div>
+
+  <!-- JAPÓN Y ASIA -->
+  <div class="periodo era-renaissance">
+    <span class="periodo-fecha" aria-hidden="true">Japón / Asia oriental</span>
+    <h4>Japón y Asia oriental</h4>
+    <ul>
+      <li><strong>Japón (corte imperial):</strong> koto y biwa en ceremonias imperiales y música ritual gagaku.</li>
+      <li><strong>Teatro Kabuki:</strong> shamisen marca ritmos y refuerza emociones dramáticas.</li>
+    </ul>
+  </div>
+
+  <!-- BARROCO Y CLASICISMO -->
+  <div class="periodo era-classical">
+    <span class="periodo-fecha" aria-hidden="true">Barroco y Clasicismo</span>
+    <h4>Barroco y Clasicismo (s. XVII–XVIII)</h4>
+    <ul>
+      <li>Violín, viola, violonchelo y primeros contrabajos.</li>
+      <li>Perfeccionados por Amati, Guarneri y Stradivari.</li>
+      <li>Las cuerdas se vuelven la base de las orquestas cortesanas.</li>
+      <li>Nacen las primeras orquestas modernas.</li>
+    </ul>
+  </div>
+
+  <!-- CUERDA Y ESPIRITUALIDAD -->
+  <div class="periodo era-medieval">
+    <span class="periodo-fecha" aria-hidden="true">Cristianismo medieval</span>
+    <h4>Cristianismo medieval y moderno</h4>
+    <ul>
+      <li>Salterios, arpas y violas en himnos, misas y procesiones.</li>
+      <li>El arpa se asocia a ángeles y figuras bíblicas.</li>
+    </ul>
+  </div>
+
+  <div class="periodo era-ancient">
+    <span class="periodo-fecha" aria-hidden="true">Tradiciones hindúes</span>
+    <h4>Tradiciones hindúes</h4>
+    <ul>
+      <li>Veena: asociada a la diosa Saraswati.</li>
+      <li>Sitar: ragas para devoción, meditación y ceremonias.</li>
+    </ul>
+  </div>
+
+  <!-- SIGLOS XVIII–XIX -->
+  <div class="periodo era-classical">
+    <span class="periodo-fecha" aria-hidden="true">Siglos XVIII–XIX</span>
+    <h4>Siglos XVIII–XIX – Orquesta clásica y guitarra romántica</h4>
+    <ul>
+      <li>La sección de cuerda domina por su expresividad y versatilidad.</li>
+      <li>Técnicas: arco, pizzicato, armónicos, trémolos, glissandi.</li>
+      <li>Guitarra moderna (Antonio de Torres): 6 cuerdas y mayor proyección.</li>
+      <li>La guitarra se populariza como instrumento doméstico.</li>
+    </ul>
+  </div>
+
+  <!-- SIGLO XX -->
+  <div class="periodo era-modern">
+    <span class="periodo-fecha" aria-hidden="true">Siglo XX</span>
+    <h4>Siglo XX – Electrificación y globalización</h4>
+    <ul>
+      <li>Nacen la guitarra eléctrica y el bajo eléctrico.</li>
+      <li>Transforman rock, jazz, blues, pop, música urbana y latina.</li>
+      <li>Violines en cine y música sinfónica moderna.</li>
+      <li>Fusiones globales: sitar, koto, ngoni y otros instrumentos tradicionales.</li>
+    </ul>
+  </div>
+
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([25, 10], 2);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 18,
+      attribution: '© OpenStreetMap, © Carto'
+    }).addTo(map);
+
+    var puntos = [
+      { coords: [32, 45], texto: "Mesopotamia (Ur)<br>Liras sumerias ceremoniales." },
+      { coords: [30, 31], texto: "Egipto<br>Arpas rituales en templos." },
+      { coords: [37.9, 23.7], texto: "Grecia<br>Lira y kithara en festividades." },
+      { coords: [43.7, 10.4], texto: "Italia (Cremona)<br>Stradivari, Amati, Guarneri." },
+      { coords: [37.4, -5.9], texto: "España (Andalucía)<br>Guitarra flamenca y clásica." },
+      { coords: [28.6, 77.2], texto: "India<br>Sitar, veena: tradición espiritual." },
+      { coords: [35.7, 139.7], texto: "Japón<br>Koto, biwa, shamisen." },
+      { coords: [17, -3], texto: "Malí<br'Blues del desierto' y tradición griot." },
+      { coords: [40.7, -74], texto: "Estados Unidos<br>Guitarra eléctrica y bajo eléctrico." },
+      { coords: [51.5, -0.1], texto: "Reino Unido<br>Rock y violinistas contemporáneos." },
+      { coords: [32.1, 34.8], texto: "Tradición judía<br>Klezmer y violinistas destacados." }
+    ];
+
+    puntos.forEach(p => L.marker(p.coords).addTo(map).bindPopup(p.texto));
+  </script>
+</body>
+</html>

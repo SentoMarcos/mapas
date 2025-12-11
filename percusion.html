@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mapa de instrumentos de percusión</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="estilos-mapas.css" />
+</head>
+
+<body>
+  <h2>Orígenes geográficos de la percusión</h2>
+  
+  <div class="timeline">
+    <h3>Línea del tiempo de la percusión</h3>
+    <div class="timeline-track">
+
+    <div class="periodo era-ancient">
+      <span class="periodo-fecha" aria-hidden="true">c. 100.000–10.000 a.C.</span>
+      <h4>c. 100.000–10.000 a.C. – Prehistoria</h4>
+      <ul>
+        <li>Percusión con piedras, troncos y el cuerpo.</li>
+        <li>Tambores primitivos de piel tensada.</li>
+        <li>Uso ritual: espíritus, ciclos de vida y muerte.</li>
+      </ul>
+    </div>
+
+    <div class="periodo era-ancient">
+      <span class="periodo-fecha" aria-hidden="true">Civilizaciones antiguas</span>
+      <h4>Civilizaciones antiguas</h4>
+      <ul>
+        <li>Mesopotamia, Egipto, África, América.</li>
+        <li>Aparición de tambores, sonajas y bastones de ritmo.</li>
+        <li>Fuerte vínculo ceremonial y comunitario.</li>
+      </ul>
+    </div>
+
+    <div class="periodo era-ancient">
+      <span class="periodo-fecha" aria-hidden="true">Chamanismo</span>
+      <h4>Chamanismo (Asia, América, África)</h4>
+      <ul>
+        <li>El tambor como portal espiritual y herramienta de trance.</li>
+      </ul>
+    </div>
+
+    <div class="periodo era-medieval">
+      <span class="periodo-fecha" aria-hidden="true">Antigüedad – Edad Moderna</span>
+      <h4>Antigüedad – Edad Moderna</h4>
+      <ul>
+        <li>China: tambores de guerra.</li>
+        <li>África: tambores parlantes para comunicación.</li>
+        <li>Europa medieval-renacentista: percusión militar.</li>
+        <li>Imperio Otomano: primeras bandas militares (Mehter).</li>
+      </ul>
+    </div>
+
+    <div class="periodo era-classical">
+      <span class="periodo-fecha" aria-hidden="true">Renacimiento – Clasicismo</span>
+      <h4>Renacimiento – Clasicismo</h4>
+      <ul>
+        <li>Panderos, claves y tambores en cortes europeas.</li>
+        <li>Entrada del timbal en la orquesta.</li>
+        <li>África y Asia: tambores como símbolos de poder.</li>
+      </ul>
+    </div>
+
+    <div class="periodo era-renaissance">
+      <span class="periodo-fecha" aria-hidden="true">Tradiciones escénicas</span>
+      <h4>Tradiciones escénicas y populares</h4>
+      <ul>
+        <li>Grecia y Roma: panderos y crótalos.</li>
+        <li>Asia: Taiko, mridangam.</li>
+        <li>Europa: juglares, bailes y festividades.</li>
+      </ul>
+    </div>
+
+    <div class="periodo era-classical">
+      <span class="periodo-fecha" aria-hidden="true">s. XVIII–XX</span>
+      <h4>Orquesta y música académica (s. XVIII–XX)</h4>
+      <ul>
+        <li>Consolidación de los timbales.</li>
+        <li>Siglo XIX: expansión de instrumentos orquestales.</li>
+        <li>Siglo XX: protagonismo de la percusión experimental.</li>
+      </ul>
+    </div>
+
+    <div class="periodo era-modern">
+      <span class="periodo-fecha" aria-hidden="true">Tradiciones folclóricas</span>
+      <h4>Tradiciones folclóricas</h4>
+      <ul>
+        <li>África: djembe, sabar, tambores de agua.</li>
+        <li>India: tabla, mridangam, ghatam.</li>
+        <li>América Latina: congas, bongós, timbales, cajón.</li>
+      </ul>
+    </div>
+
+    <div class="periodo era-contemporary">
+      <span class="periodo-fecha" aria-hidden="true">Siglo XX–XXI</span>
+      <h4>Siglo XX–XXI: batería, pop y globalización</h4>
+      <ul>
+        <li>Nacimiento de la batería (1900–1930).</li>
+        <li>Rock, pop, funk, metal.</li>
+        <li>Fusión global, electrónica y samplers.</li>
+      </ul>
+    </div>
+    </div>
+  </div>
+  
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([15, 0], 2);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 18,
+      attribution: '© OpenStreetMap, © Carto'
+    }).addTo(map);
+
+    var puntos = [
+      { coords: [15, -1], texto: "África Occidental<br>Djembe, sabar, tambores parlantes." },
+      { coords: [28.6, 77.2], texto: "India<br>Tabla, mridangam, ghatam." },
+      { coords: [36, 138], texto: "Japón<br>Taiko: rituales, teatro, festivales." },
+      { coords: [30, 31], texto: "Egipto / Próximo Oriente<br>Percusión ritual ancestral." },
+      { coords: [50, -3], texto: "Reino Unido<br>Evelyn Glennie y la percusión clásica moderna." },
+      { coords: [43.7, -79.4], texto: "Canadá<br>NEXUS: pioneros de la percusión contemporánea." },
+      { coords: [40.4, -3.7], texto: "Europa<br>Timbales, caja, bombo y platillos orquestales." },
+      { coords: [19.4, -99.1], texto: "México / Caribe<br>Congas, bongós, timbales." },
+      { coords: [-12, -77], texto: "Perú<br>Cajón afroperuano." },
+      { coords: [-23, -43], texto: "Brasil<br>Samba y tradiciones afrobrasileñas." },
+      { coords: [29.8, -95.3], texto: "EE. UU.<br>Batería moderna: jazz, rock, funk." }
+    ];
+
+    puntos.forEach(p => L.marker(p.coords).addTo(map).bindPopup(p.texto));
+  </script>
+</body>
+</html>

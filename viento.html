@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Mapa de instrumentos de viento</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="estilos-mapas.css" />
+</head>
+
+<body>
+  <h2>Orígenes geográficos de instrumentos de viento</h2>
+
+  <div class="timeline">
+    <h3>Línea del tiempo de los instrumentos de viento</h3>
+    <div class="timeline-track">
+
+  <!-- FLAUTAS -->
+  <div class="periodo era-ancient">
+    <span class="periodo-fecha" aria-hidden="true">c. 40.000 a.C.</span>
+    <h4>c. 40.000 a.C. – Prehistoria (Flautas primitivas)</h4>
+    <ul>
+      <li>Flautas de hueso de animales.</li>
+      <li>Uso en rituales de caza, danzas espirituales y ceremonias comunitarias.</li>
+    </ul>
+  </div>
+
+  <div class="periodo era-ancient">
+    <span class="periodo-fecha" aria-hidden="true">3000–500 a.C.</span>
+    <h4>Antiguas civilizaciones (3000–500 a.C.)</h4>
+    <ul>
+      <li>Egipto, Mesopotamia, Grecia: flautas simples y dobles como el aulós.</li>
+      <li>Procesiones religiosas, ritos funerarios, teatro y danzas sagradas.</li>
+    </ul>
+  </div>
+
+  <div class="periodo era-medieval">
+    <span class="periodo-fecha" aria-hidden="true">Asia s. VIII–XIII</span>
+    <h4>Asia (siglos VIII–XIII)</h4>
+    <ul>
+      <li>Shakuhachi (Japón): usada por monjes zen para meditación.</li>
+      <li>Bansuri (India): vinculada a Krishna y la música devocional.</li>
+    </ul>
+  </div>
+
+  <div class="periodo era-renaissance">
+    <span class="periodo-fecha" aria-hidden="true">Renacimiento / Barroco</span>
+    <h4>Renacimiento y Barroco (siglos XV–XVIII)</h4>
+    <ul>
+      <li>Nace la flauta travesera de madera y su versión barroca.</li>
+      <li>Entra en cortes, bailes nobles y orquestas de cámara.</li>
+    </ul>
+  </div>
+
+  <div class="periodo era-classical">
+    <span class="periodo-fecha" aria-hidden="true">Clasicismo – Romanticismo</span>
+    <h4>Clasicismo y Romanticismo (siglos XVIII–XIX)</h4>
+    <ul>
+      <li>Perfeccionamiento del sistema de llaves.</li>
+      <li>La flauta se convierte en instrumento estándar de la orquesta moderna.</li>
+    </ul>
+  </div>
+
+  <div class="periodo era-modern">
+    <span class="periodo-fecha" aria-hidden="true">Siglos XX–XXI</span>
+    <h4>Siglos XX–XXI</h4>
+    <ul>
+      <li>Uso de flautas en jazz, cine, bandas de viento y música contemporánea.</li>
+      <li>Técnicas modernas: microtonalidad, frullato, efectos extendidos.</li>
+      <li>Fusión con flautas tradicionales (bansuri, shakuhachi, flauta de pan).</li>
+    </ul>
+  </div>
+
+  <!-- CAÑAS SIMPLES Y DOBLES -->
+  <div class="periodo era-classical">
+    <span class="periodo-fecha" aria-hidden="true">Cañas dobles y simples</span>
+    <h4>Cañas dobles y simples (aulós → oboe, clarinete, fagot)</h4>
+    <ul>
+      <li><strong>Grecia antigua:</strong> aulós usado en tragedias, danzas y rituales.</li>
+      <li><strong>Edad Media – Renacimiento:</strong> caramillos y chirimías para exteriores.</li>
+      <li><strong>Barroco:</strong> oboe y fagot barroco entran en cortes y orquestas.</li>
+      <li><strong>Siglos XVIII–XIX:</strong> nace el clarinete a partir del chalumeau; Mozart lo impulsa.</li>
+      <li><strong>Siglo XX:</strong> clarinete y saxofón dominan el jazz y las big bands.</li>
+    </ul>
+  </div>
+
+  <!-- METALES -->
+  <div class="periodo era-medieval">
+    <span class="periodo-fecha" aria-hidden="true">Metales</span>
+    <h4>Metales (cuernos, trompetas, cornetas, trombones, tuba)</h4>
+    <ul>
+      <li><strong>Antigüedad:</strong> cornu, salpinx, tuba romana para órdenes militares.</li>
+      <li><strong>Edad Media:</strong> trompetas naturales en ceremonias reales.</li>
+      <li><strong>Renacimiento – Barroco:</strong> trompeta barroca sin pistones; trompa natural en orquesta.</li>
+      <li><strong>Siglo XIX:</strong> aparecen pistones y válvulas; nace la tuba.</li>
+      <li><strong>Siglo XX:</strong> la trompeta domina el jazz (Armstrong, Miles Davis).</li>
+    </ul>
+  </div>
+
+  <!-- SAXOFÓN -->
+  <div class="periodo era-modern">
+    <span class="periodo-fecha" aria-hidden="true">Saxofón</span>
+    <h4>Saxofón</h4>
+    <ul>
+      <li><strong>Siglo XIX:</strong> inventado por Adolphe Sax.</li>
+      <li><strong>Siglo XX:</strong> símbolo del jazz y la música moderna (Coltrane, Parker, Getz).</li>
+    </ul>
+  </div>
+
+  <!-- ÓRGANO -->
+  <div class="periodo era-renaissance">
+    <span class="periodo-fecha" aria-hidden="true">Órgano de tubos</span>
+    <h4>Órgano de tubos</h4>
+    <ul>
+      <li>De los primeros órganos hidráulicos a los órganos medievales.</li>
+      <li>Renacimiento y Barroco: instrumento central del culto cristiano.</li>
+      <li>Siglos XIX–XX: órganos monumentales en catedrales y salas de concierto.</li>
+    </ul>
+  </div>
+
+  <!-- INSTRUMENTOS RITUALES -->
+  <div class="periodo era-ancient">
+    <span class="periodo-fecha" aria-hidden="true">Instrumentos rituales</span>
+    <h4>Instrumentos rituales específicos</h4>
+    <ul>
+      <li><strong>Shofar (Israel antiguo):</strong> cuerno de carnero usado en Rosh Hashaná y Yom Kipur.</li>
+      <li><strong>Flauta de pan:</strong> presente en Europa del Este, Balcanes y Andes; popularizada en el siglo XX.</li>
+      <li><strong>Instrumentos de Tuvá:</strong> igil y flautas vinculadas al canto difónico y prácticas chamánicas.</li>
+      <li><strong>Bansuri y shakuhachi:</strong> símbolos de espiritualidad india y japonesa.</li>
+    </ul>
+  </div>
+
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    var map = L.map('map').setView([20, 10], 2);
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 18,
+      attribution: '© OpenStreetMap, © Carto'
+    }).addTo(map);
+
+    var puntos = [
+      { coords: [31.5, 35], texto: "Shofar – Israel antiguo<br>Instrumento ritual solemne." },
+      { coords: [30, 31], texto: "Flautas antiguas – Egipto<br>Ritos religiosos y funerarios." },
+      { coords: [37.9, 23.7], texto: "Aulós – Grecia clásica<br>Música ritual y teatral." },
+      { coords: [48.8, 2.3], texto: "Órgano de tubos – Europa<br>Tradición cristiana." },
+      { coords: [50.85, 4.35], texto: "Saxofón – Bélgica<br>Adolphe Sax." },
+      { coords: [28.6, 77.2], texto: "Bansuri – India<br>Música devocional." },
+      { coords: [35.6, 139.6], texto: "Shakuhachi – Japón<br>Meditación zen." },
+      { coords: [45.9, 26.9], texto: "Flauta de pan – Rumanía<br>Zamfir." },
+      { coords: [51.5, -0.1], texto: "Clarinete y big bands<br>Goodman, Shaw." },
+      { coords: [40.7, -74], texto: "Jazz moderno – EE.UU.<br>Parker, Coltrane, Davis." },
+      { coords: [51.7, 94.4], texto: "Tuvá<br>Flautas tradicionales." }
+    ];
+
+    puntos.forEach(p => L.marker(p.coords).addTo(map).bindPopup(p.texto));
+  </script>
+</body>
+</html>

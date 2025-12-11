@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Museo Sonoro – Inicio</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f3f3f3;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50, #4e73df);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .salas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      width: 90%;
+      margin: auto;
+    }
+
+    .sala {
+      background: white;
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .sala:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    }
+
+    .sala h3 {
+      margin: 10px 0 10px 0;
+      font-size: 1.4rem;
+      color: #2c3e50;
+    }
+
+    .sala p {
+      font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    .sala a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #4e73df;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .sala a:hover {
+      background: #2c3e50;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Museo Sonoro</h1>
+  <p>Explora la evolución de los instrumentos, la producción musical y el arte de la dirección.</p>
+</header>
+
+<section class="salas">
+
+  <div class="sala">
+    <h3>Instrumentos de Cuerda</h3>
+    <p>Un viaje desde las liras sumerias hasta la guitarra eléctrica moderna.</p>
+    <a href="cuerda.html">Entrar</a>
+  </div>
+
+  <div class="sala">
+    <h3>Instrumentos de Percusión</h3>
+    <p>Ritmos ancestrales de África, Asia y América que dieron forma al mundo.</p>
+    <a href="percusion.html">Entrar</a>
+  </div>
+
+  <div class="sala">
+    <h3>Instrumentos de Viento</h3>
+    <p>Sonidos rituales, orquestales y tradicionales que han marcado culturas enteras.</p>
+    <a href="viento.html">Entrar</a>
+  </div>
+
+  <div class="sala">
+    <h3>Producción Musical</h3>
+    <p>De la cinta magnética al sampling digital y la tecnología moderna.</p>
+    <a href="produccion.html">Entrar</a>
+  </div>
+
+  <div class="sala">
+    <h3>Dirección y Conciertos</h3>
+    <p>El arte de guiar una orquesta y la historia de las grandes interpretaciones.</p>
+    <a href="direccion.html">Entrar</a>
+  </div>
+
+</section>
+
+</body>
+</html>
