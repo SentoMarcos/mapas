@@ -1,30 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Mapa de Hitos en la Producción Musical</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Museo Sonoro · Producción musical</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="estilos-mapas.css" />
 </head>
 
-<body>
+<body class="theme-produccion">
   <header class="page-hero">
-    <p class="hero-label">Atlas sonoro global</p>
-    <h1>Producción musical</h1>
-    <p class="hero-copy">Del pergamino medieval al estudio portátil: repasa los inventos que cambiaron cómo capturamos el sonido.</p>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="brand-mark" href="index.html">Museo Sonoro</a>
+      <div class="nav-links">
+        <a href="cuerda.html">Cuerda</a>
+        <a href="percusion.html">Percusión</a>
+        <a href="viento.html">Viento</a>
+        <a href="produccion.html" class="is-active">Producción</a>
+        <a href="direccion.html">Dirección</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-label">Atlas sonoro global</p>
+        <h1>Producción musical</h1>
+        <p class="hero-copy">Del pergamino medieval al estudio portátil: repasa los inventos que cambiaron cómo capturamos, manipulamos y distribuimos el sonido.</p>
+
+        <div class="hero-meta">
+          <div>
+            <span>Procesos</span>
+            <strong>9 hitos</strong>
+          </div>
+          <div>
+            <span>Tecnologías</span>
+            <strong>8 capas</strong>
+          </div>
+          <div>
+            <span>Estudios</span>
+            <strong>5 polos</strong>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#linea-produccion">Recorrer línea</a>
+          <a class="btn-ghost" href="#mapa-produccion">Ver mapa</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <h3>Capas de producción</h3>
+        <p>Soportes físicos, cinta magnética, sintetizadores, DAWs e inteligencia artificial conviven en el estudio moderno.</p>
+
+        <div class="hero-timeline-blip">
+          <article>
+            <span>Analógico</span>
+            <strong>Cinta &amp; válvulas</strong>
+            <p>Control de saturación y edición artesanal.</p>
+          </article>
+          <article>
+            <span>Digital</span>
+            <strong>DAW</strong>
+            <p>Edición no lineal y mezcla con automatización granular.</p>
+          </article>
+          <article>
+            <span>Cloud</span>
+            <strong>Colaboración</strong>
+            <p>Sesiones remotas, stems y mastering en línea.</p>
+          </article>
+        </div>
+
+        <ul class="hero-taglist" aria-label="Tecnologías destacadas">
+          <li>Fonógrafo</li>
+          <li>Cinta</li>
+          <li>Sampler</li>
+          <li>DAW</li>
+          <li>IA generativa</li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <main class="page-content">
-    <section class="panel-card timeline-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Historia viva</span>
-        <h2>Línea del tiempo de la producción musical</h2>
-        <p>Innovaciones clave que moldearon el registro, la mezcla y la circulación de la música.</p>
-      </div>
+    <section class="panel-card timeline-panel" id="linea-produccion">
+      <div class="panel-inner">
+        <div class="section-heading">
+          <span class="section-kicker">Historia viva</span>
+          <h2>Línea del tiempo de la producción musical</h2>
+          <p>Innovaciones clave que moldearon el registro, la mezcla y la circulación de la música.</p>
+        </div>
 
-      <div class="timeline" aria-label="Línea del tiempo interactiva">
-        <div class="timeline-track">
+        <div class="timeline" aria-label="Línea del tiempo interactiva">
+          <div class="timeline-track">
       <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -166,20 +234,30 @@
           </ul>
         </div>
       </div>
-    </div>
-      </div>
+          </div>
+        </div>
 
-      <p class="timeline-hint">🎚️ Usa la rueda del ratón o desliza para repasar cada revolución tecnológica.</p>
+        <p class="timeline-hint">🎚️ Usa la rueda del ratón o desliza para repasar cada revolución tecnológica.</p>
+      </div>
     </section>
 
-    <section class="panel-card map-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Geografía</span>
-        <h2>Mapa de origen y difusión</h2>
-        <p>Ciudades laboratorio que detonaron nuevas formas de producir sonido.</p>
-      </div>
+    <section class="panel-card map-panel" id="mapa-produccion">
+      <div class="panel-inner">
+        <div class="map-meta">
+          <div class="section-heading">
+            <span class="section-kicker">Geografía</span>
+            <h2>Mapa de origen y difusión</h2>
+            <p>Ciudades laboratorio que detonaron nuevas formas de producir sonido.</p>
+          </div>
+          <ul>
+            <li>Imprentas, fábricas de instrumentos y sellos pioneros.</li>
+            <li>Capitales de la cinta, el sampleo y la síntesis.</li>
+            <li>Hubs digitales y escuelas de mezcla/mastering.</li>
+          </ul>
+        </div>
 
-      <div id="map"></div>
+        <div id="map" aria-label="Mapa interactivo de producción musical"></div>
+      </div>
     </section>
   </main>
 

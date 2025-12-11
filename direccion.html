@@ -1,29 +1,97 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Mapa de Hitos en la Dirección Musical</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Museo Sonoro · Dirección musical</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="estilos-mapas.css" />
 </head>
 
-<body>
+<body class="theme-direccion">
   <header class="page-hero">
-    <p class="hero-label">Atlas sonoro global</p>
-    <h1>Dirección musical</h1>
-    <p class="hero-copy">Gestos, batutas y podios: sigue cómo los directores se convirtieron en narradores del sonido orquestal.</p>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="brand-mark" href="index.html">Museo Sonoro</a>
+      <div class="nav-links">
+        <a href="cuerda.html">Cuerda</a>
+        <a href="percusion.html">Percusión</a>
+        <a href="viento.html">Viento</a>
+        <a href="produccion.html">Producción</a>
+        <a href="direccion.html" class="is-active">Dirección</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-label">Podios conectados</p>
+        <h1>Dirección musical</h1>
+        <p class="hero-copy">Explora la evolución del gesto que articula orquestas: de la quironimia medieval al director multimedia que sincroniza cine, escenarios digitales y giras globales.</p>
+
+        <div class="hero-meta">
+          <div>
+            <span>Obras guiadas</span>
+            <strong>12 hitos</strong>
+          </div>
+          <div>
+            <span>Solistas coordinados</span>
+            <strong>80+</strong>
+          </div>
+          <div>
+            <span>Podios globales</span>
+            <strong>5 continentes</strong>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#linea-direccion">Seguir la línea</a>
+          <a class="btn-ghost" href="#mapa-direccion">Explorar mapa</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <h3>Gestos que cuentan historias</h3>
+        <p>El director traduce partituras en energía compartida: respiración, mirada y tecnología hacen que cada compás cobre vida.</p>
+
+        <div class="hero-timeline-blip">
+          <article>
+            <span>Origen</span>
+            <strong>Quironimia coral</strong>
+            <p>Los primeros gestos con mano abierta esculpen frases en monasterios.</p>
+          </article>
+          <article>
+            <span>Revolución</span>
+            <strong>Batuta romántica</strong>
+            <p>Mahler y Toscanini convierten al director en voz artística propia.</p>
+          </article>
+          <article>
+            <span>Presente</span>
+            <strong>Podio digital</strong>
+            <p>Click-tracks, realidad mixta y diversidad amplían el repertorio.</p>
+          </article>
+        </div>
+
+        <ul class="hero-taglist" aria-label="Conceptos clave de dirección">
+          <li>Quironimia</li>
+          <li>Batuta</li>
+          <li>Score follower</li>
+          <li>Orquestas jóvenes</li>
+          <li>Click-track</li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <main class="page-content">
-    <section class="panel-card timeline-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Historia viva</span>
-        <h2>Línea del tiempo de la dirección orquestal</h2>
-        <p>Desde la quironimia medieval hasta los podios tecnológicos del siglo XXI.</p>
-      </div>
+    <section class="panel-card timeline-panel" id="linea-direccion">
+      <div class="panel-inner">
+        <div class="section-heading">
+          <span class="section-kicker">Historia viva</span>
+          <h2>Línea del tiempo de la dirección orquestal</h2>
+          <p>Desde la quironimia medieval hasta los podios tecnológicos del siglo XXI.</p>
+        </div>
 
-      <div class="timeline" aria-label="Línea del tiempo interactiva">
+        <div class="timeline" aria-label="Línea del tiempo interactiva">
         <div class="timeline-track">
       <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
         <defs>
@@ -149,20 +217,30 @@
           </ul>
         </div>
       </div>
-    </div>
-      </div>
+          </div>
+        </div>
 
-      <p class="timeline-hint">🎼 Desplázate para seguir cada etapa del arte de dirigir.</p>
+        <p class="timeline-hint">🎼 Desplázate horizontalmente o usa la rueda para seguir cada etapa del arte de dirigir.</p>
+      </div>
     </section>
 
-    <section class="panel-card map-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Geografía</span>
-        <h2>Mapa de origen y difusión</h2>
-        <p>Palacios, teatros y escuelas que definieron la batuta moderna.</p>
-      </div>
+    <section class="panel-card map-panel" id="mapa-direccion">
+      <div class="panel-inner">
+        <div class="map-meta">
+          <div class="section-heading">
+            <span class="section-kicker">Geografía</span>
+            <h2>Mapa de podios y escuelas</h2>
+            <p>Palacios, teatros y academias que forjaron el lenguaje del gesto orquestal.</p>
+          </div>
+          <ul>
+            <li>Puntos donde se estandariza la batuta moderna.</li>
+            <li>Escuelas que profesionalizan la técnica y la pedagogía.</li>
+            <li>Centros que impulsan la diversidad de directores contemporáneos.</li>
+          </ul>
+        </div>
 
-      <div id="map"></div>
+        <div id="map" aria-label="Mapa interactivo de dirección"></div>
+      </div>
     </section>
   </main>
 

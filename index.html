@@ -2,127 +2,169 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Museo Sonoro – Inicio</title>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f3f3f3;
-      color: #333;
-    }
-
-    header {
-      background: linear-gradient(135deg, #2c3e50, #4e73df);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-      letter-spacing: 1px;
-    }
-
-    header p {
-      margin-top: 10px;
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    .salas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      padding: 40px;
-      width: 90%;
-      margin: auto;
-    }
-
-    .sala {
-      background: white;
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .sala:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-    }
-
-    .sala h3 {
-      margin: 10px 0 10px 0;
-      font-size: 1.4rem;
-      color: #2c3e50;
-    }
-
-    .sala p {
-      font-size: 0.95rem;
-      opacity: 0.8;
-    }
-
-    .sala a {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #4e73df;
-      color: white;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .sala a:hover {
-      background: #2c3e50;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Museo Sonoro · Portal inmersivo</title>
+  <link rel="stylesheet" href="estilos-mapas.css" />
 </head>
-<body>
 
-<header>
-  <h1>Museo Sonoro</h1>
-  <p>Explora la evolución de los instrumentos, la producción musical y el arte de la dirección.</p>
-</header>
+<body class="theme-home">
+  <header class="page-hero">
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="brand-mark" href="index.html">Museo Sonoro</a>
+      <div class="nav-links">
+        <a href="cuerda.html">Cuerda</a>
+        <a href="percusion.html">Percusión</a>
+        <a href="viento.html">Viento</a>
+        <a href="produccion.html">Producción</a>
+        <a href="direccion.html">Dirección</a>
+      </div>
+    </nav>
 
-<section class="salas">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-label">Museo inmersivo · RA/RV</p>
+        <h1>Portal del Museo Sonoro</h1>
+        <p class="hero-copy">Proyecto de diseño de sistema virtual 2025/2026. El "Museo Inmersivo de la Música" conecta educación y cultura con experiencias VR/AR que permiten estudiar, interpretar y dirigir sin barreras físicas.</p>
 
-  <div class="sala">
-    <h3>Instrumentos de Cuerda</h3>
-    <p>Un viaje desde las liras sumerias hasta la guitarra eléctrica moderna.</p>
-    <a href="cuerda.html">Entrar</a>
-  </div>
+        <div class="hero-meta">
+          <div>
+            <span>Modos</span>
+            <strong>Doméstico / Museo</strong>
+          </div>
+          <div>
+            <span>Experiencias</span>
+            <strong>5 salas</strong>
+          </div>
+          <div>
+            <span>Tecnologías</span>
+            <strong>VR · AR · Audio 8D</strong>
+          </div>
+        </div>
 
-  <div class="sala">
-    <h3>Instrumentos de Percusión</h3>
-    <p>Ritmos ancestrales de África, Asia y América que dieron forma al mundo.</p>
-    <a href="percusion.html">Entrar</a>
-  </div>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#concepto">Conocer concepto</a>
+          <a class="btn-ghost" href="#salas">Explorar salas</a>
+        </div>
+      </div>
 
-  <div class="sala">
-    <h3>Instrumentos de Viento</h3>
-    <p>Sonidos rituales, orquestales y tradicionales que han marcado culturas enteras.</p>
-    <a href="viento.html">Entrar</a>
-  </div>
+      <div class="hero-visual">
+        <h3>Educación inmersiva</h3>
+        <p>Interfaces de apuntar, agarrar y mover facilitan el acceso a estudiantes, visitantes de museos y familias.</p>
 
-  <div class="sala">
-    <h3>Producción Musical</h3>
-    <p>De la cinta magnética al sampling digital y la tecnología moderna.</p>
-    <a href="produccion.html">Entrar</a>
-  </div>
+        <div class="hero-timeline-blip">
+          <article>
+            <span>Acceso</span>
+            <strong>Democratizado</strong>
+            <p>Instrumentos históricos y laboratorios de producción disponibles para cualquier persona.</p>
+          </article>
+          <article>
+            <span>Aprendizaje</span>
+            <strong>Experiencial</strong>
+            <p>Gamificación musical para comprender armonía, orquestación y mezcla.</p>
+          </article>
+          <article>
+            <span>Simulación</span>
+            <strong>Histórica</strong>
+            <p>Épocas, géneros y territorios musicales recreados mediante RA/RV.</p>
+          </article>
+        </div>
 
-  <div class="sala">
-    <h3>Dirección y Conciertos</h3>
-    <p>El arte de guiar una orquesta y la historia de las grandes interpretaciones.</p>
-    <a href="direccion.html">Entrar</a>
-  </div>
+        <ul class="hero-taglist" aria-label="Pilares del sistema">
+          <li>Innovación docente</li>
+          <li>Realidades mixtas</li>
+          <li>Gamificación</li>
+          <li>Audio espacial</li>
+          <li>Multijugador</li>
+        </ul>
+      </div>
+    </div>
+  </header>
 
-</section>
+  <main class="page-content">
+    <section class="panel-card" id="concepto">
+      <div class="panel-inner">
+        <div class="section-heading">
+          <span class="section-kicker">Concepto</span>
+          <h2>Museo Inmersivo de la Música</h2>
+          <p>Herramienta de innovación docente y divulgación cultural que supera las barreras de los museos físicos mediante experiencias RA/RV y audio espacial.</p>
+        </div>
 
+        <p>El sistema ofrece dos modos de uso: VR doméstica con gafas personales y un recorrido museístico con recompensas, puntuaciones y tienda física para canjear logros. Está pensado para público general, estudiantes de música, profesorado y visitantes sin experiencia previa en realidad virtual.</p>
+
+        <ul class="concept-highlights">
+          <li><strong>Acceso democratizado</strong><br />Tocar instrumentos históricos o experimentar producción sin material físico.</li>
+          <li><strong>Aprendizaje experiencial</strong><br />Interacciones sencillas (apuntar, agarrar, mover) para niños, jóvenes y adultos.</li>
+          <li><strong>Visualización de conceptos</strong><br />Ondas sonoras, armonía y disposición orquestal se vuelven tangibles.</li>
+          <li><strong>Simulación histórica</strong><br />Contextos geográficos, compositores y géneros se exploran de forma interactiva.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="panel-card" id="salas">
+      <div class="panel-inner">
+        <div class="section-heading">
+          <span class="section-kicker">Recorrido</span>
+          <h2>Salas y experiencias principales</h2>
+          <p>Cada sala combina historia, interpretación VR y mapas interactivos que contextualizan los instrumentos y procesos musicales.</p>
+        </div>
+
+        <div class="portal-grid">
+          <article class="portal-card">
+            <span class="section-kicker">Sala 01</span>
+            <h3>Instrumentos de cuerda</h3>
+            <p>Viaje desde liras sumerias y laúdes imperiales hasta la guitarra eléctrica contemporánea.</p>
+            <a href="cuerda.html">Entrar</a>
+          </article>
+          <article class="portal-card">
+            <span class="section-kicker">Sala 02</span>
+            <h3>Percusión global</h3>
+            <p>Ritmos trance, rituales africanos, carnavales caribeños y beats urbanos en una línea temporal global.</p>
+            <a href="percusion.html">Entrar</a>
+          </article>
+          <article class="portal-card">
+            <span class="section-kicker">Sala 03</span>
+            <h3>Vientos del mundo</h3>
+            <p>De flautas paleolíticas a saxos de jazz con experiencias respiratorias y visualizaciones de columnas de aire.</p>
+            <a href="viento.html">Entrar</a>
+          </article>
+          <article class="portal-card">
+            <span class="section-kicker">Sala 04</span>
+            <h3>Producción musical</h3>
+            <p>Laboratorios de mezcla: cinta magnética, síntesis modular, sampling digital e IA creativa.</p>
+            <a href="produccion.html">Entrar</a>
+          </article>
+          <article class="portal-card">
+            <span class="section-kicker">Sala 05</span>
+            <h3>Dirección orquestal</h3>
+            <p>Del gesto coral medieval al podio digital con click-tracks y sincronía audiovisual.</p>
+            <a href="direccion.html">Entrar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel-card" id="equipo">
+      <div class="panel-inner">
+        <div class="section-heading">
+          <span class="section-kicker">Equipo</span>
+          <h2>Personas detrás del proyecto</h2>
+          <p>Integrantes responsables de conceptualizar, diseñar y documentar el sistema RA/RV para el curso 2025/2026.</p>
+        </div>
+
+        <div class="team-grid" aria-label="Integrantes del grupo">
+          <article class="team-card"><strong>Rubén García</strong></article>
+          <article class="team-card"><strong>Sento Marcos</strong></article>
+          <article class="team-card"><strong>Jordan Phillips</strong></article>
+          <article class="team-card"><strong>Rocío Piquer</strong></article>
+          <article class="team-card"><strong>Carla Rumeu</strong></article>
+          <article class="team-card"><strong>Rogers Sobrado</strong></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Proyecto "Museo Inmersivo de la Música" · Diseño de Sistema Virtual 2025/2026.</p>
+  </footer>
 </body>
 </html>

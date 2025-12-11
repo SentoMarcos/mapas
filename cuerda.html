@@ -1,253 +1,330 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Mapa de instrumentos de cuerda</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Museo Sonoro · Instrumentos de cuerda</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="estilos-mapas.css" />
 </head>
 
-<body>
+<body class="theme-cuerda">
   <header class="page-hero">
-    <p class="hero-label">Atlas sonoro global</p>
-    <h1>Instrumentos de cuerda</h1>
-    <p class="hero-copy">Explora cómo la cuerda ha conectado civilizaciones: de las primeras arpas mesopotámicas al sonido eléctrico contemporáneo.</p>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="brand-mark" href="index.html">Museo Sonoro</a>
+      <div class="nav-links">
+        <a href="cuerda.html" class="is-active">Cuerda</a>
+        <a href="percusion.html">Percusión</a>
+        <a href="viento.html">Viento</a>
+        <a href="produccion.html">Producción</a>
+        <a href="direccion.html">Dirección</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-label">Atlas sonoro global</p>
+        <h1>Instrumentos de cuerda</h1>
+        <p class="hero-copy">Explora cómo el tejido de cuerdas conectó imperios, religiones y movimientos contemporáneos: arpas imperiales, laúdes cortesanos, cuerdas sinfónicas y guitarras eléctricas que definieron escenas urbanas.</p>
+
+        <div class="hero-meta">
+          <div>
+            <span>Hitos curados</span>
+            <strong>12 eras</strong>
+          </div>
+          <div>
+            <span>Continentes</span>
+            <strong>5 regiones</strong>
+          </div>
+          <div>
+            <span>Instrumentos</span>
+            <strong>15+ claves</strong>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#linea-cuerda">Recorrer línea</a>
+          <a class="btn-ghost" href="#mapa-cuerda">Ver mapa</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <h3>Capas resonantes</h3>
+        <p>Texturas que van del arco gutural al sustain eléctrico. Una síntesis de estilos que sigue evolucionando.</p>
+
+        <div class="hero-timeline-blip">
+          <article>
+            <span>Arcaico</span>
+            <strong>Arpas sagradas</strong>
+            <p>Mesopotamia y Egipto como epicentros rituales.</p>
+          </article>
+          <article>
+            <span>Clásico</span>
+            <strong>Orquesta europea</strong>
+            <p>Violín, viola y chelo como lenguaje universal.</p>
+          </article>
+          <article>
+            <span>Contemporáneo</span>
+            <strong>Electricidad</strong>
+            <p>Guitarras y bajos redefiniendo géneros globales.</p>
+          </article>
+        </div>
+
+        <ul class="hero-taglist" aria-label="Instrumentos destacados">
+          <li>Arpa</li>
+          <li>Laúd</li>
+          <li>Viola da gamba</li>
+          <li>Koto</li>
+          <li>Guitarra eléctrica</li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <main class="page-content">
-    <section class="panel-card timeline-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Historia viva</span>
-        <h2>Línea del tiempo de los instrumentos de cuerda</h2>
-        <p>Recorre hitos musicales y descubre cómo cada cultura aportó nuevas formas, materiales y repertorios.</p>
-      </div>
+    <section class="panel-card timeline-panel" id="linea-cuerda">
+      <div class="panel-inner">
+        <div class="section-heading">
+          <span class="section-kicker">Historia viva</span>
+          <h2>Línea del tiempo de los instrumentos de cuerda</h2>
+          <p>Recorre hitos musicales y descubre cómo cada cultura aportó nuevas formas, materiales y repertorios.</p>
+        </div>
 
-      <div class="timeline" aria-label="Línea del tiempo interactiva">
-        <div class="timeline-track">
-      <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#f4a261" />
-            <stop offset="25%" stop-color="#2a9d8f" />
-            <stop offset="50%" stop-color="#457b9d" />
-            <stop offset="75%" stop-color="#e76f51" />
-            <stop offset="100%" stop-color="#9b5de5" />
-          </linearGradient>
-        </defs>
-        <path d="M0,260 C120,60 240,360 360,160 S600,360 720,200 960,360 1080,160 1200,320 1200,220" stroke="url(#timelineGradient)" />
-      </svg>
+        <div class="timeline" aria-label="Línea del tiempo interactiva">
+          <div class="timeline-track">
+            <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f4a261" />
+                  <stop offset="25%" stop-color="#2a9d8f" />
+                  <stop offset="50%" stop-color="#457b9d" />
+                  <stop offset="75%" stop-color="#e76f51" />
+                  <stop offset="100%" stop-color="#9b5de5" />
+                </linearGradient>
+              </defs>
+              <path d="M0,260 C120,60 240,360 360,160 S600,360 720,200 960,360 1080,160 1200,320 1200,220" stroke="url(#timelineGradient)" />
+            </svg>
 
-      <div class="timeline-event side-top" style="--pos:4%;" data-progress="0.04">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">3500 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">30 a.C.</span>
-        </div>
-        <div class="periodo era-ancient">
-          <h4>3500–30 a.C. · Mesopotamia y Egipto</h4>
-          <ul>
-            <li>Aparecen las primeras liras sumerias y arpas egipcias para corte y templos.</li>
-            <li>Cajas de resonancia talladas, cuerdas de tripa y decoración simbólica protegen al intérprete.</li>
-            <li>Sonido imprescindible en ceremonias funerarias y procesiones devocionales.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:4%;" data-progress="0.04">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">3500 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">30 a.C.</span>
+              </div>
+              <div class="periodo era-ancient">
+                <h4>3500–30 a.C. · Mesopotamia y Egipto</h4>
+                <ul>
+                  <li>Aparecen las primeras liras sumerias y arpas egipcias para corte y templos.</li>
+                  <li>Cajas de resonancia talladas, cuerdas de tripa y decoración simbólica protegen al intérprete.</li>
+                  <li>Sonido imprescindible en ceremonias funerarias y procesiones devocionales.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:12%;" data-progress="0.12">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">1200 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">146 a.C.</span>
-        </div>
-        <div class="periodo era-ancient">
-          <h4>1200–146 a.C. · Grecia antigua</h4>
-          <ul>
-            <li>Lira y kithara asociadas a Apolo lideran ritos, poesía y teatro.</li>
-            <li>La educación musical busca armonizar alma, cuerpo y cosmos.</li>
-            <li>Concursos panhelénicos difunden repertorios heroicos entre ciudades-estado.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-bottom" style="--pos:12%;" data-progress="0.12">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">1200 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">146 a.C.</span>
+              </div>
+              <div class="periodo era-ancient">
+                <h4>1200–146 a.C. · Grecia antigua</h4>
+                <ul>
+                  <li>Lira y kithara asociadas a Apolo lideran ritos, poesía y teatro.</li>
+                  <li>La educación musical busca armonizar alma, cuerpo y cosmos.</li>
+                  <li>Concursos panhelénicos difunden repertorios heroicos entre ciudades-estado.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-top" style="--pos:22%;" data-progress="0.22">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">3000 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">1000 d.C.</span>
-        </div>
-        <div class="periodo era-ancient">
-          <h4>Edad Antigua y Alta Edad Media</h4>
-          <ul>
-            <li>Bardos y poetas conservan la memoria de batallas y linajes con liras portátiles.</li>
-            <li>Las cortes tribales exaltan héroes y legitiman poder político.</li>
-            <li>La música narra heroísmo aunque no participa directamente en la batalla.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:22%;" data-progress="0.22">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">3000 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">1000 d.C.</span>
+              </div>
+              <div class="periodo era-ancient">
+                <h4>Edad Antigua y Alta Edad Media</h4>
+                <ul>
+                  <li>Bardos y poetas conservan la memoria de batallas y linajes con liras portátiles.</li>
+                  <li>Las cortes tribales exaltan héroes y legitiman poder político.</li>
+                  <li>La música narra heroísmo aunque no participa directamente en la batalla.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:32%;" data-progress="0.32">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">2070 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">220 d.C.</span>
-        </div>
-        <div class="periodo era-ancient">
-          <h4>China antigua</h4>
-          <ul>
-            <li>Guqin y guzheng protagonizan academias confucianas y corte imperial.</li>
-            <li>Usos: ceremonias militares previas, música disciplinaria y cantos de campaña.</li>
-            <li>Tablaturas refinadas preservan afinaciones modales y ética del intérprete.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-bottom" style="--pos:32%;" data-progress="0.32">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">2070 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">220 d.C.</span>
+              </div>
+              <div class="periodo era-ancient">
+                <h4>China antigua</h4>
+                <ul>
+                  <li>Guqin y guzheng protagonizan academias confucianas y corte imperial.</li>
+                  <li>Usos: ceremonias militares previas, música disciplinaria y cantos de campaña.</li>
+                  <li>Tablaturas refinadas preservan afinaciones modales y ética del intérprete.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-top" style="--pos:42%;" data-progress="0.42">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">476 d.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">1492 d.C.</span>
-        </div>
-        <div class="periodo era-medieval">
-          <h4>Europa medieval</h4>
-          <ul>
-            <li>Zanfona (hurdy-gurdy), laúdes primitivos y salterios acompañan cantares épicos.</li>
-            <li>Arpas y salterios sostienen música devocional cristiana.</li>
-            <li>Lira nórdica anima sagas islandesas de tradición vikinga.</li>
-            <li>Trovadores y juglares llevan historias por rutas comerciales y cortes europeas.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:42%;" data-progress="0.42">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">476 d.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">1492 d.C.</span>
+              </div>
+              <div class="periodo era-medieval">
+                <h4>Europa medieval</h4>
+                <ul>
+                  <li>Zanfona (hurdy-gurdy), laúdes primitivos y salterios acompañan cantares épicos.</li>
+                  <li>Arpas y salterios sostienen música devocional cristiana.</li>
+                  <li>Lira nórdica anima sagas islandesas de tradición vikinga.</li>
+                  <li>Trovadores y juglares llevan historias por rutas comerciales y cortes europeas.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:52%;" data-progress="0.52">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">1400 d.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">1600 d.C.</span>
-        </div>
-        <div class="periodo era-renaissance">
-          <h4>Renacimiento</h4>
-          <ul>
-            <li>El laúd se convierte en el instrumento estrella de Europa.</li>
-            <li>Símbolo de refinamiento, educación y estatus social.</li>
-            <li>Usos: banquetes, poesía, danza, diplomacia y celebraciones cortesanas.</li>
-            <li>Surgen técnicas complejas y notaciones específicas.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-bottom" style="--pos:52%;" data-progress="0.52">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">1400 d.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">1600 d.C.</span>
+              </div>
+              <div class="periodo era-renaissance">
+                <h4>Renacimiento</h4>
+                <ul>
+                  <li>El laúd se convierte en el instrumento estrella de Europa.</li>
+                  <li>Símbolo de refinamiento, educación y estatus social.</li>
+                  <li>Usos: banquetes, poesía, danza, diplomacia y celebraciones cortesanas.</li>
+                  <li>Surgen técnicas complejas y notaciones específicas.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-top" style="--pos:62%;" data-progress="0.62">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">3000 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">1800 d.C.</span>
-        </div>
-        <div class="periodo era-renaissance">
-          <h4>Japón y Asia oriental</h4>
-          <ul>
-            <li><strong>Japón (corte imperial):</strong> koto y biwa en ceremonias imperiales y música gagaku.</li>
-            <li><strong>Teatro Kabuki:</strong> shamisen marca ritmos y refuerza emociones dramáticas.</li>
-            <li>Escuelas regionales conservan repertorios cortesanos y populares.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:62%;" data-progress="0.62">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">3000 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">1800 d.C.</span>
+              </div>
+              <div class="periodo era-renaissance">
+                <h4>Japón y Asia oriental</h4>
+                <ul>
+                  <li><strong>Japón (corte imperial):</strong> koto y biwa en ceremonias imperiales y música gagaku.</li>
+                  <li><strong>Teatro Kabuki:</strong> shamisen marca ritmos y refuerza emociones dramáticas.</li>
+                  <li>Escuelas regionales conservan repertorios cortesanos y populares.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:72%;" data-progress="0.72">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">1600 d.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">1820 d.C.</span>
-        </div>
-        <div class="periodo era-classical">
-          <h4>Barroco y Clasicismo</h4>
-          <ul>
-            <li>Violín, viola, violonchelo y contrabajo se estandarizan.</li>
-            <li>Amati, Guarneri y Stradivari elevan la luthería italiana.</li>
-            <li>Las cuerdas se vuelven la base de las orquestas cortesanas.</li>
-            <li>Nacen las primeras orquestas modernas permanentes.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-bottom" style="--pos:72%;" data-progress="0.72">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">1600 d.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">1820 d.C.</span>
+              </div>
+              <div class="periodo era-classical">
+                <h4>Barroco y Clasicismo</h4>
+                <ul>
+                  <li>Violín, viola, violonchelo y contrabajo se estandarizan.</li>
+                  <li>Amati, Guarneri y Stradivari elevan la luthería italiana.</li>
+                  <li>Las cuerdas se vuelven la base de las orquestas cortesanas.</li>
+                  <li>Nacen las primeras orquestas modernas permanentes.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-top" style="--pos:82%;" data-progress="0.82">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">476 d.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">Presente</span>
-        </div>
-        <div class="periodo era-medieval">
-          <h4>Cristianismo medieval y moderno</h4>
-          <ul>
-            <li>Salterios, arpas y violas protagonizan himnos, misas y procesiones.</li>
-            <li>El arpa se asocia a ángeles y figuras bíblicas en el arte sacro.</li>
-            <li>Capillas musicales permanentes acompañan liturgia y coronaciones.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:82%;" data-progress="0.82">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">476 d.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">Presente</span>
+              </div>
+              <div class="periodo era-medieval">
+                <h4>Cristianismo medieval y moderno</h4>
+                <ul>
+                  <li>Salterios, arpas y violas protagonizan himnos, misas y procesiones.</li>
+                  <li>El arpa se asocia a ángeles y figuras bíblicas en el arte sacro.</li>
+                  <li>Capillas musicales permanentes acompañan liturgia y coronaciones.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:88%;" data-progress="0.88">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">1500 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">Presente</span>
-        </div>
-        <div class="periodo era-ancient">
-          <h4>Tradiciones hindúes</h4>
-          <ul>
-            <li>Veena: asociada a la diosa Saraswati en templos y corte.</li>
-            <li>Sitar: ragas para devoción, meditación y ceremonias bhakti.</li>
-            <li>Los gharanas transmiten técnicas de meend, gamakas y microtonos.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-bottom" style="--pos:88%;" data-progress="0.88">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">1500 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">Presente</span>
+              </div>
+              <div class="periodo era-ancient">
+                <h4>Tradiciones hindúes</h4>
+                <ul>
+                  <li>Veena: asociada a la diosa Saraswati en templos y corte.</li>
+                  <li>Sitar: ragas para devoción, meditación y ceremonias bhakti.</li>
+                  <li>Los gharanas transmiten técnicas de meend, gamakas y microtonos.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-top" style="--pos:94%;" data-progress="0.94">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">1750 d.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">1900 d.C.</span>
-        </div>
-        <div class="periodo era-classical">
-          <h4>Orquesta clásica y guitarra romántica</h4>
-          <ul>
-            <li>La sección de cuerda domina por expresividad y versatilidad.</li>
-            <li>Técnicas: arco, pizzicato, armónicos, trémolos y glissandi.</li>
-            <li>Guitarra moderna de Antonio de Torres gana proyección y equilibrio.</li>
-            <li>La guitarra se populariza como instrumento doméstico y de salón.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:94%;" data-progress="0.94">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">1750 d.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">1900 d.C.</span>
+              </div>
+              <div class="periodo era-classical">
+                <h4>Orquesta clásica y guitarra romántica</h4>
+                <ul>
+                  <li>La sección de cuerda domina por expresividad y versatilidad.</li>
+                  <li>Técnicas: arco, pizzicato, armónicos, trémolos y glissandi.</li>
+                  <li>Guitarra moderna de Antonio de Torres gana proyección y equilibrio.</li>
+                  <li>La guitarra se populariza como instrumento doméstico y de salón.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:99%;" data-progress="0.99">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">1900 d.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">Presente</span>
+            <div class="timeline-event side-bottom" style="--pos:99%;" data-progress="0.99">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">1900 d.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">Presente</span>
+              </div>
+              <div class="periodo era-modern">
+                <h4>Siglo XX – XXI</h4>
+                <ul>
+                  <li>Nacen la guitarra eléctrica y el bajo eléctrico: rock, jazz, blues, pop, música urbana y latina.</li>
+                  <li>Violines amplificados protagonizan cine y música sinfónica moderna.</li>
+                  <li>Fusiones globales integran sitar, koto, ngoni y otros instrumentos tradicionales.</li>
+                  <li>La tecnología impulsa escenas híbridas y producciones digitales.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="periodo era-modern">
-          <h4>Siglo XX – XXI</h4>
-          <ul>
-            <li>Nacen la guitarra eléctrica y el bajo eléctrico: rock, jazz, blues, pop, música urbana y latina.</li>
-            <li>Violines amplificados protagonizan cine y música sinfónica moderna.</li>
-            <li>Fusiones globales integran sitar, koto, ngoni y otros instrumentos tradicionales.</li>
-            <li>La tecnología impulsa escenas híbridas y producciones digitales.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-      </div>
 
-      <p class="timeline-hint">📍 Usa la rueda del ratón o desliza para recorrer las épocas.</p>
+        <p class="timeline-hint">📍 Usa la rueda del ratón o desliza para recorrer las épocas.</p>
+      </div>
     </section>
 
-    <section class="panel-card map-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Geografía</span>
-        <h2>Mapa de origen y difusión</h2>
-        <p>Visualiza los territorios que dieron forma a los instrumentos emblemáticos de cuerda.</p>
-      </div>
+    <section class="panel-card map-panel" id="mapa-cuerda">
+      <div class="panel-inner">
+        <div class="map-meta">
+          <div class="section-heading">
+            <span class="section-kicker">Geografía</span>
+            <h2>Mapa de origen y difusión</h2>
+            <p>Visualiza los territorios que dieron forma a los instrumentos emblemáticos de cuerda.</p>
+          </div>
+          <ul>
+            <li>Rutas imperiales y cortes religiosas.</li>
+            <li>Luthería italiana y escuelas asiáticas.</li>
+            <li>Escenas urbanas que electrificaron el siglo XX.</li>
+          </ul>
+        </div>
 
-      <div id="map"></div>
+        <div id="map" aria-label="Mapa interactivo de instrumentos de cuerda"></div>
+      </div>
     </section>
   </main>
 
@@ -255,86 +332,86 @@
     <p>Mapa interactivo elaborado para el proyecto de historia musical.</p>
   </footer>
 
-    <script>
-      (function () {
-        function clamp(value, min, max) {
-          return Math.min(Math.max(value, min), max);
-        }
+  <script>
+    (function () {
+      function clamp(value, min, max) {
+        return Math.min(Math.max(value, min), max);
+      }
 
-        function syncTrack(track) {
-          var svg = track.querySelector('.timeline-curve');
-          if (!svg) return;
-          var path = svg.querySelector('path');
-          if (!path) return;
+      function syncTrack(track) {
+        var svg = track.querySelector('.timeline-curve');
+        if (!svg) return;
+        var path = svg.querySelector('path');
+        if (!path) return;
 
-          var viewBox = svg.viewBox.baseVal;
-          var pathLength = path.getTotalLength();
-          var trackRect = track.getBoundingClientRect();
-          var svgRect = svg.getBoundingClientRect();
-          var offsetX = svgRect.left - trackRect.left;
-          var offsetY = svgRect.top - trackRect.top;
-          var ratioX = svgRect.width / viewBox.width;
-          var ratioY = svgRect.height / viewBox.height;
+        var viewBox = svg.viewBox.baseVal;
+        var pathLength = path.getTotalLength();
+        var trackRect = track.getBoundingClientRect();
+        var svgRect = svg.getBoundingClientRect();
+        var offsetX = svgRect.left - trackRect.left;
+        var offsetY = svgRect.top - trackRect.top;
+        var ratioX = svgRect.width / viewBox.width;
+        var ratioY = svgRect.height / viewBox.height;
 
-          track.querySelectorAll('.timeline-event').forEach(function (eventEl) {
-            var progressAttr = parseFloat(eventEl.dataset.progress);
-            var cssPos = eventEl.style.getPropertyValue('--pos').replace('%', '').trim();
-            var fallbackProgress = cssPos ? parseFloat(cssPos) / 100 : 0;
-            var progress = clamp(isNaN(progressAttr) ? fallbackProgress : progressAttr, 0, 1);
-            var point = path.getPointAtLength(pathLength * progress);
+        track.querySelectorAll('.timeline-event').forEach(function (eventEl) {
+          var progressAttr = parseFloat(eventEl.dataset.progress);
+          var cssPos = eventEl.style.getPropertyValue('--pos').replace('%', '').trim();
+          var fallbackProgress = cssPos ? parseFloat(cssPos) / 100 : 0;
+          var progress = clamp(isNaN(progressAttr) ? fallbackProgress : progressAttr, 0, 1);
+          var point = path.getPointAtLength(pathLength * progress);
 
-            var relativeX = offsetX + point.x * ratioX;
-            var relativeY = offsetY + point.y * ratioY;
-            var xPercent = (relativeX / trackRect.width) * 100;
-            var yPercent = (relativeY / trackRect.height) * 100;
+          var relativeX = offsetX + point.x * ratioX;
+          var relativeY = offsetY + point.y * ratioY;
+          var xPercent = (relativeX / trackRect.width) * 100;
+          var yPercent = (relativeY / trackRect.height) * 100;
 
-            eventEl.style.setProperty('--pos', xPercent + '%');
-            eventEl.style.setProperty('--node-anchor', yPercent + '%');
-          });
-        }
+          eventEl.style.setProperty('--pos', xPercent + '%');
+          eventEl.style.setProperty('--node-anchor', yPercent + '%');
+        });
+      }
 
-        function syncAll() {
-          document.querySelectorAll('.timeline-track').forEach(syncTrack);
-        }
+      function syncAll() {
+        document.querySelectorAll('.timeline-track').forEach(syncTrack);
+      }
 
-        function bindWheelScroll() {
-          var timelines = document.querySelectorAll('.timeline');
-          timelines.forEach(function (timeline) {
-            if (timeline.dataset.wheelBound === 'true') return;
-            timeline.dataset.wheelBound = 'true';
-            timeline.addEventListener(
-              'wheel',
-              function (evt) {
-                if (evt.ctrlKey) return;
-                var delta = Math.abs(evt.deltaY) > Math.abs(evt.deltaX) ? evt.deltaY : evt.deltaX;
-                if (delta === 0) return;
+      function bindWheelScroll() {
+        var timelines = document.querySelectorAll('.timeline');
+        timelines.forEach(function (timeline) {
+          if (timeline.dataset.wheelBound === 'true') return;
+          timeline.dataset.wheelBound = 'true';
+          timeline.addEventListener(
+            'wheel',
+            function (evt) {
+              if (evt.ctrlKey) return;
+              var delta = Math.abs(evt.deltaY) > Math.abs(evt.deltaX) ? evt.deltaY : evt.deltaX;
+              if (delta === 0) return;
 
-                var prev = timeline.scrollLeft;
-                var maxScroll = timeline.scrollWidth - timeline.clientWidth;
-                if (maxScroll <= 0) return;
+              var prev = timeline.scrollLeft;
+              var maxScroll = timeline.scrollWidth - timeline.clientWidth;
+              if (maxScroll <= 0) return;
 
-                var next = Math.min(Math.max(prev + delta, 0), maxScroll);
-                timeline.scrollLeft = next;
+              var next = Math.min(Math.max(prev + delta, 0), maxScroll);
+              timeline.scrollLeft = next;
 
-                if (next !== prev) {
-                  evt.preventDefault();
-                }
-              },
-              { passive: false }
-            );
-          });
-        }
+              if (next !== prev) {
+                evt.preventDefault();
+              }
+            },
+            { passive: false }
+          );
+        });
+      }
 
-        function init() {
-          syncAll();
-          bindWheelScroll();
-        }
+      function init() {
+        syncAll();
+        bindWheelScroll();
+      }
 
-        window.addEventListener('resize', syncAll);
-        window.addEventListener('load', init);
-        init();
-      })();
-    </script>
+      window.addEventListener('resize', syncAll);
+      window.addEventListener('load', init);
+      init();
+    })();
+  </script>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>

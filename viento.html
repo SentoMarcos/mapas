@@ -1,30 +1,98 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Mapa de instrumentos de viento</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Museo Sonoro · Instrumentos de viento</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="estilos-mapas.css" />
 </head>
 
-<body>
+<body class="theme-viento">
   <header class="page-hero">
-    <p class="hero-label">Atlas sonoro global</p>
-    <h1>Instrumentos de viento</h1>
-    <p class="hero-copy">Vive el viaje de las columnas de aire: de las flautas paleolíticas a los metales sinfónicos y los solos de jazz.</p>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="brand-mark" href="index.html">Museo Sonoro</a>
+      <div class="nav-links">
+        <a href="cuerda.html">Cuerda</a>
+        <a href="percusion.html">Percusión</a>
+        <a href="viento.html" class="is-active">Viento</a>
+        <a href="produccion.html">Producción</a>
+        <a href="direccion.html">Dirección</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-label">Atlas sonoro global</p>
+        <h1>Instrumentos de viento</h1>
+        <p class="hero-copy">Vive el viaje de las columnas de aire: de flautas paleolíticas a metales sinfónicos y solos de jazz que han guiado rituales, batallas y escenas urbanas.</p>
+
+        <div class="hero-meta">
+          <div>
+            <span>Eras curadas</span>
+            <strong>11 hitos</strong>
+          </div>
+          <div>
+            <span>Corrientes</span>
+            <strong>6 rutas</strong>
+          </div>
+          <div>
+            <span>Instrumentos</span>
+            <strong>18 figuras</strong>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#linea-viento">Recorrer línea</a>
+          <a class="btn-ghost" href="#mapa-viento">Ver mapa</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <h3>Aire en movimiento</h3>
+        <p>Cañas dobles, flautas de borde y metales brillantes definen timbres que narran ceremonias y revoluciones.</p>
+
+        <div class="hero-timeline-blip">
+          <article>
+            <span>Rito</span>
+            <strong>Quenas y shaku</strong>
+            <p>Respiración circular para conectar con la montaña y el bosque.</p>
+          </article>
+          <article>
+            <span>Corte</span>
+            <strong>Oboes y cornetas</strong>
+            <p>Marcan protocolos militares y ceremoniales europeos.</p>
+          </article>
+          <article>
+            <span>Impro</span>
+            <strong>Sax &amp; brass</strong>
+            <p>El jazz convierte al viento en manifiesto urbano.</p>
+          </article>
+        </div>
+
+        <ul class="hero-taglist" aria-label="Instrumentos destacados">
+          <li>Quena</li>
+          <li>Shakuhachi</li>
+          <li>Oboe</li>
+          <li>Saxofón</li>
+          <li>Didgeridoo</li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <main class="page-content">
-    <section class="panel-card timeline-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Historia viva</span>
-        <h2>Línea del tiempo de los instrumentos de viento</h2>
-        <p>Una panorámica de flautas, cañas y metales que han guiado ritos, guerras y conciertos.</p>
-      </div>
+    <section class="panel-card timeline-panel" id="linea-viento">
+      <div class="panel-inner">
+        <div class="section-heading">
+          <span class="section-kicker">Historia viva</span>
+          <h2>Línea del tiempo de los instrumentos de viento</h2>
+          <p>Una panorámica de flautas, cañas y metales que han guiado ritos, guerras y conciertos.</p>
+        </div>
 
-      <div class="timeline" aria-label="Línea del tiempo interactiva">
-        <div class="timeline-track">
+        <div class="timeline" aria-label="Línea del tiempo interactiva">
+          <div class="timeline-track">
       <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -201,20 +269,30 @@
         </div>
       </div>
 
-    </div>
-      </div>
+          </div>
+        </div>
 
-      <p class="timeline-hint">🎺 Desplázate horizontalmente o usa la rueda del ratón para seguir la evolución del viento.</p>
+        <p class="timeline-hint">🎺 Desplázate horizontalmente o usa la rueda del ratón para seguir la evolución del viento.</p>
+      </div>
     </section>
 
-    <section class="panel-card map-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Geografía</span>
-        <h2>Mapa de origen y difusión</h2>
-        <p>Sitúa los centros rituales, artesanales y urbanos que catapultaron a cada instrumento.</p>
-      </div>
+    <section class="panel-card map-panel" id="mapa-viento">
+      <div class="panel-inner">
+        <div class="map-meta">
+          <div class="section-heading">
+            <span class="section-kicker">Geografía</span>
+            <h2>Mapa de origen y difusión</h2>
+            <p>Sitúa los centros rituales, artesanales y urbanos que catapultaron a cada instrumento.</p>
+          </div>
+          <ul>
+            <li>Rutas andinas, asiáticas y mediterráneas.</li>
+            <li>Talleres cortesanos y bandas militares.</li>
+            <li>Capitales del jazz y escuelas sinfónicas.</li>
+          </ul>
+        </div>
 
-      <div id="map"></div>
+        <div id="map" aria-label="Mapa interactivo de viento"></div>
+      </div>
     </section>
   </main>
 

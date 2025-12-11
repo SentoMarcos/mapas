@@ -1,200 +1,278 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8" />
-  <title>Mapa de instrumentos de percusión</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Museo Sonoro · Percusión y ritmo</title>
 
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="estilos-mapas.css" />
 </head>
 
-<body>
+<body class="theme-percusion">
   <header class="page-hero">
-    <p class="hero-label">Atlas sonoro global</p>
-    <h1>Percusión y ritmo</h1>
-    <p class="hero-copy">Desde los primeros golpes tribales hasta los sets híbridos contemporáneos, descubre cómo la percusión ha marcado el pulso de cada cultura.</p>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a class="brand-mark" href="index.html">Museo Sonoro</a>
+      <div class="nav-links">
+        <a href="cuerda.html">Cuerda</a>
+        <a href="percusion.html" class="is-active">Percusión</a>
+        <a href="viento.html">Viento</a>
+        <a href="produccion.html">Producción</a>
+        <a href="direccion.html">Dirección</a>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="hero-label">Atlas sonoro global</p>
+        <h1>Percusión y ritmo</h1>
+        <p class="hero-copy">Desde los primeros golpes tribales hasta los sets híbridos contemporáneos, descubre cómo la percusión marcó rituales, guerras, fiestas y estudios que dieron forma al pulso colectivo.</p>
+
+        <div class="hero-meta">
+          <div>
+            <span>Hitos curados</span>
+            <strong>11 eras</strong>
+          </div>
+          <div>
+            <span>Tradiciones</span>
+            <strong>7 regiones</strong>
+          </div>
+          <div>
+            <span>Lenguajes rítmicos</span>
+            <strong>20+</strong>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="#linea-percusion">Recorrer línea</a>
+          <a class="btn-ghost" href="#mapa-percusion">Ver mapa</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <h3>Pulso colectivo</h3>
+        <p>Membranas, metales y electrónica convergen en grooves que sincronizan cuerpos y comunidades.</p>
+
+        <div class="hero-timeline-blip">
+          <article>
+            <span>Trance</span>
+            <strong>Chamanes</strong>
+            <p>Tambores que median entre mundos espirituales.</p>
+          </article>
+          <article>
+            <span>Batalla</span>
+            <strong>Bandas</strong>
+            <p>Mehter, cajas y bombos para coordinar ejércitos.</p>
+          </article>
+          <article>
+            <span>Club</span>
+            <strong>808 &amp; sampleo</strong>
+            <p>La percusión digital impulsa escenas globales.</p>
+          </article>
+        </div>
+
+        <ul class="hero-taglist" aria-label="Percusiones destacadas">
+          <li>Taiko</li>
+          <li>Djembe</li>
+          <li>Tabla</li>
+          <li>Steelpan</li>
+          <li>808</li>
+        </ul>
+      </div>
+    </div>
   </header>
 
   <main class="page-content">
-    <section class="panel-card timeline-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Historia viva</span>
-        <h2>Línea del tiempo de la percusión</h2>
-        <p>Explora rituales, guerras, fiestas y estudios que definieron la evolución de membranófonos e idiófonos.</p>
-      </div>
+    <section class="panel-card timeline-panel" id="linea-percusion">
+      <div class="panel-inner">
+        <div class="section-heading">
+          <span class="section-kicker">Historia viva</span>
+          <h2>Línea del tiempo de la percusión</h2>
+          <p>Explora rituales, guerras, fiestas y estudios que definieron la evolución de membranófonos e idiófonos.</p>
+        </div>
 
-      <div class="timeline" aria-label="Línea del tiempo interactiva">
-        <div class="timeline-track">
-      <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#f4a261" />
-            <stop offset="25%" stop-color="#2a9d8f" />
-            <stop offset="50%" stop-color="#457b9d" />
-            <stop offset="75%" stop-color="#e76f51" />
-            <stop offset="100%" stop-color="#9b5de5" />
-          </linearGradient>
-        </defs>
-        <path d="M0,260 C120,60 240,360 360,160 S600,360 720,200 960,360 1080,160 1200,320 1200,220" stroke="url(#timelineGradient)" />
-      </svg>
+        <div class="timeline" aria-label="Línea del tiempo interactiva">
+          <div class="timeline-track">
+            <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#f4a261" />
+                  <stop offset="25%" stop-color="#2a9d8f" />
+                  <stop offset="50%" stop-color="#457b9d" />
+                  <stop offset="75%" stop-color="#e76f51" />
+                  <stop offset="100%" stop-color="#9b5de5" />
+                </linearGradient>
+              </defs>
+              <path d="M0,260 C120,60 240,360 360,160 S600,360 720,200 960,360 1080,160 1200,320 1200,220" stroke="url(#timelineGradient)" />
+            </svg>
 
-      <div class="timeline-event side-top" style="--pos:3%;" data-progress="0.03">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">100.000 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">10.000 a.C.</span>
-        </div>
-        <div class="periodo era-ancient">
-          <h4>Prehistoria sonora</h4>
-          <ul>
-            <li>Percusión corporal, piedras y troncos como primer lenguaje musical.</li>
-            <li>Tambores de piel tensada acompañan rituales de caza y fertilidad.</li>
-            <li>Golpes repetitivos crean trance colectivo y memoria oral.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:3%;" data-progress="0.03">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">100.000 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">10.000 a.C.</span>
+              </div>
+              <div class="periodo era-ancient">
+                <h4>Prehistoria sonora</h4>
+                <ul>
+                  <li>Percusión corporal, piedras y troncos como primer lenguaje musical.</li>
+                  <li>Tambores de piel tensada acompañan rituales de caza y fertilidad.</li>
+                  <li>Golpes repetitivos crean trance colectivo y memoria oral.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:13%;" data-progress="0.13">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">4000 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">1500 d.C.</span>
-        </div>
-        <div class="periodo era-ancient">
-          <h4>Civilizaciones antiguas</h4>
-          <ul>
-            <li>Mesopotamia, Egipto y Mesoamérica documentan tambores, sonajas y bastones.</li>
-            <li>Instrumentos vinculados a coronaciones, eclipses y calendarios agrícolas.</li>
-            <li>Los talleres sacerdotales codifican ritmos para cada deidad.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-bottom" style="--pos:13%;" data-progress="0.13">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">4000 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">1500 d.C.</span>
+              </div>
+              <div class="periodo era-ancient">
+                <h4>Civilizaciones antiguas</h4>
+                <ul>
+                  <li>Mesopotamia, Egipto y Mesoamérica documentan tambores, sonajas y bastones.</li>
+                  <li>Instrumentos vinculados a coronaciones, eclipses y calendarios agrícolas.</li>
+                  <li>Los talleres sacerdotales codifican ritmos para cada deidad.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-top" style="--pos:25%;" data-progress="0.25">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">30.000 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">Presente</span>
-        </div>
-        <div class="periodo era-ancient">
-          <h4>Chamanismo transcontinental</h4>
-          <ul>
-            <li>En Asia, América y África el tambor abre portales espirituales.</li>
-            <li>Patrones repetitivos inducen trance en sanadores y comunidades.</li>
-            <li>Cada pueblo asocia timbres y afinaciones a fuerzas de la naturaleza.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:25%;" data-progress="0.25">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">30.000 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">Presente</span>
+              </div>
+              <div class="periodo era-ancient">
+                <h4>Chamanismo transcontinental</h4>
+                <ul>
+                  <li>En Asia, América y África el tambor abre portales espirituales.</li>
+                  <li>Patrones repetitivos inducen trance en sanadores y comunidades.</li>
+                  <li>Cada pueblo asocia timbres y afinaciones a fuerzas de la naturaleza.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:37%;" data-progress="0.37">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">3000 a.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">1789 d.C.</span>
-        </div>
-        <div class="periodo era-medieval">
-          <h4>Percusión militar y ceremonial</h4>
-          <ul>
-            <li>China desarrolla tambores de guerra para coordinar ejércitos.</li>
-            <li>África occidental crea tambores parlantes para transmitir mensajes.</li>
-            <li>Europa adopta cajas y bombos en cortes, mientras el Imperio Otomano funda bandas Mehter.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-bottom" style="--pos:37%;" data-progress="0.37">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">3000 a.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">1789 d.C.</span>
+              </div>
+              <div class="periodo era-medieval">
+                <h4>Percusión militar y ceremonial</h4>
+                <ul>
+                  <li>China desarrolla tambores de guerra para coordinar ejércitos.</li>
+                  <li>África occidental crea tambores parlantes para transmitir mensajes.</li>
+                  <li>Europa adopta cajas y bombos en cortes, mientras el Imperio Otomano funda bandas Mehter.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-top" style="--pos:48%;" data-progress="0.48">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">1400 d.C.</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">1820 d.C.</span>
-        </div>
-        <div class="periodo era-classical">
-          <h4>Renacimiento y Clasicismo</h4>
-          <ul>
-            <li>Panderos, claves y tambores acompañan danzas cortesanas.</li>
-            <li>Los timbales entran en orquesta y requieren afinación precisa.</li>
-            <li>África y Asia siguen usando tambores como símbolos de poder estatal.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:48%;" data-progress="0.48">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">1400 d.C.</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">1820 d.C.</span>
+              </div>
+              <div class="periodo era-classical">
+                <h4>Renacimiento y Clasicismo</h4>
+                <ul>
+                  <li>Panderos, claves y tambores acompañan danzas cortesanas.</li>
+                  <li>Los timbales entran en orquesta y requieren afinación precisa.</li>
+                  <li>África y Asia siguen usando tambores como símbolos de poder estatal.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:58%;" data-progress="0.58">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">Tradiciones</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">Escénicas</span>
-        </div>
-        <div class="periodo era-renaissance">
-          <h4>Teatro y festividades</h4>
-          <ul>
-            <li>Grecia y Roma emplean panderos y crótalos en teatro y culto.</li>
-            <li>Asia impulsa taiko, mridangam y danzas dramáticas.</li>
-            <li>Juglares europeos usan percusión ligera en ferias y procesiones.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-bottom" style="--pos:58%;" data-progress="0.58">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">Tradiciones</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">Escénicas</span>
+              </div>
+              <div class="periodo era-renaissance">
+                <h4>Teatro y festividades</h4>
+                <ul>
+                  <li>Grecia y Roma emplean panderos y crótalos en teatro y culto.</li>
+                  <li>Asia impulsa taiko, mridangam y danzas dramáticas.</li>
+                  <li>Juglares europeos usan percusión ligera en ferias y procesiones.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-top" style="--pos:70%;" data-progress="0.70">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">Siglo XVIII</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">Siglo XX</span>
-        </div>
-        <div class="periodo era-classical">
-          <h4>Orquesta y academia</h4>
-          <ul>
-            <li>Se consolidan secciones de percusión con timbal, caja y platos.</li>
-            <li>Siglo XIX amplía inventario orquestal con vibráfono, celesta y más.</li>
-            <li>Siglo XX abraza percusión experimental y ensembles dedicados.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-top" style="--pos:70%;" data-progress="0.70">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">Siglo XVIII</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">Siglo XX</span>
+              </div>
+              <div class="periodo era-classical">
+                <h4>Orquesta y academia</h4>
+                <ul>
+                  <li>Se consolidan secciones de percusión con timbal, caja y platos.</li>
+                  <li>Siglo XIX amplía inventario orquestal con vibráfono, celesta y más.</li>
+                  <li>Siglo XX abraza percusión experimental y ensembles dedicados.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-bottom" style="--pos:82%;" data-progress="0.82">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">Tradiciones</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">Folclóricas</span>
-        </div>
-        <div class="periodo era-modern">
-          <h4>Folclore afro-indígena</h4>
-          <ul>
-            <li>África: djembe, sabar y tambores de agua mantienen lazos comunitarios.</li>
-            <li>India: tabla, mridangam y ghatam sostienen la tradición carnática.</li>
-            <li>América Latina: congas, bongós, timbales y cajón se globalizan.</li>
-          </ul>
-        </div>
-      </div>
+            <div class="timeline-event side-bottom" style="--pos:82%;" data-progress="0.82">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">Tradiciones</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">Folclóricas</span>
+              </div>
+              <div class="periodo era-modern">
+                <h4>Folclore afro-indígena</h4>
+                <ul>
+                  <li>África: djembe, sabar y tambores de agua mantienen lazos comunitarios.</li>
+                  <li>India: tabla, mridangam y ghatam sostienen la tradición carnática.</li>
+                  <li>América Latina: congas, bongós, timbales y cajón se globalizan.</li>
+                </ul>
+              </div>
+            </div>
 
-      <div class="timeline-event side-top" style="--pos:92%;" data-progress="0.92">
-        <div class="timeline-node" tabindex="0">
-          <span class="fecha-superior">Siglo XX</span>
-          <span class="timeline-node-dot" aria-hidden="true"></span>
-          <span class="fecha-inferior">Siglo XXI</span>
+            <div class="timeline-event side-top" style="--pos:92%;" data-progress="0.92">
+              <div class="timeline-node" tabindex="0">
+                <span class="fecha-superior">Siglo XX</span>
+                <span class="timeline-node-dot" aria-hidden="true"></span>
+                <span class="fecha-inferior">Siglo XXI</span>
+              </div>
+              <div class="periodo era-contemporary">
+                <h4>Batería y globalización</h4>
+                <ul>
+                  <li>Nace la batería moderna entre 1900 y 1930 con pedales y hi-hat.</li>
+                  <li>Rock, pop, funk y metal expanden técnicas y configuraciones.</li>
+                  <li>Electrónica, samplers y pads híbridos permiten fusiones sin fronteras.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="periodo era-contemporary">
-          <h4>Batería y globalización</h4>
-          <ul>
-            <li>Nace la batería moderna entre 1900 y 1930 con pedales y hi-hat.</li>
-            <li>Rock, pop, funk y metal expanden técnicas y configuraciones.</li>
-            <li>Electrónica, samplers y pads híbridos permiten fusiones sin fronteras.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-      </div>
 
-      <p class="timeline-hint">🥁 Desliza horizontalmente o usa la rueda del ratón para recorrer los hitos rítmicos.</p>
+        <p class="timeline-hint">📍 Usa la rueda del ratón o desliza para recorrer las épocas.</p>
+      </div>
     </section>
 
-    <section class="panel-card map-panel">
-      <div class="section-heading">
-        <span class="section-kicker">Geografía</span>
-        <h2>Mapa de origen y difusión</h2>
-        <p>Localiza los epicentros donde nacieron los patrones que aún hacen vibrar al mundo.</p>
-      </div>
+    <section class="panel-card map-panel" id="mapa-percusion">
+      <div class="panel-inner">
+        <div class="map-meta">
+          <div class="section-heading">
+            <span class="section-kicker">Geografía</span>
+            <h2>Mapa de rituales y difusión</h2>
+            <p>Visualiza los territorios donde la percusión marcó rituales, guerras y celebraciones comunitarias.</p>
+          </div>
+          <ul>
+            <li>Pulsos ancestrales africanos y asiáticos.</li>
+            <li>Caminos militares, carnavales y procesiones.</li>
+            <li>Laboratorios urbanos y beats electrónicos.</li>
+          </ul>
+        </div>
 
-      <div id="map"></div>
+        <div id="map" aria-label="Mapa interactivo de percusión"></div>
+      </div>
     </section>
   </main>
 
@@ -202,90 +280,90 @@
     <p>Mapa interactivo elaborado para el proyecto de historia musical.</p>
   </footer>
 
-    <script>
-      (function () {
-        function clamp(value, min, max) {
-          return Math.min(Math.max(value, min), max);
-        }
+  <script>
+    (function () {
+      function clamp(value, min, max) {
+        return Math.min(Math.max(value, min), max);
+      }
 
-        function syncTrack(track) {
-          var svg = track.querySelector('.timeline-curve');
-          if (!svg) return;
-          var path = svg.querySelector('path');
-          if (!path) return;
+      function syncTrack(track) {
+        var svg = track.querySelector('.timeline-curve');
+        if (!svg) return;
+        var path = svg.querySelector('path');
+        if (!path) return;
 
-          var viewBox = svg.viewBox.baseVal;
-          var pathLength = path.getTotalLength();
-          var trackRect = track.getBoundingClientRect();
-          var svgRect = svg.getBoundingClientRect();
-          var offsetX = svgRect.left - trackRect.left;
-          var offsetY = svgRect.top - trackRect.top;
-          var ratioX = svgRect.width / viewBox.width;
-          var ratioY = svgRect.height / viewBox.height;
+        var viewBox = svg.viewBox.baseVal;
+        var pathLength = path.getTotalLength();
+        var trackRect = track.getBoundingClientRect();
+        var svgRect = svg.getBoundingClientRect();
+        var offsetX = svgRect.left - trackRect.left;
+        var offsetY = svgRect.top - trackRect.top;
+        var ratioX = svgRect.width / viewBox.width;
+        var ratioY = svgRect.height / viewBox.height;
 
-          track.querySelectorAll('.timeline-event').forEach(function (eventEl) {
-            var progressAttr = parseFloat(eventEl.dataset.progress);
-            var cssPos = eventEl.style.getPropertyValue('--pos').replace('%', '').trim();
-            var fallbackProgress = cssPos ? parseFloat(cssPos) / 100 : 0;
-            var progress = clamp(isNaN(progressAttr) ? fallbackProgress : progressAttr, 0, 1);
-            var point = path.getPointAtLength(pathLength * progress);
+        track.querySelectorAll('.timeline-event').forEach(function (eventEl) {
+          var progressAttr = parseFloat(eventEl.dataset.progress);
+          var cssPos = eventEl.style.getPropertyValue('--pos').replace('%', '').trim();
+          var fallbackProgress = cssPos ? parseFloat(cssPos) / 100 : 0;
+          var progress = clamp(isNaN(progressAttr) ? fallbackProgress : progressAttr, 0, 1);
+          var point = path.getPointAtLength(pathLength * progress);
 
-            var relativeX = offsetX + point.x * ratioX;
-            var relativeY = offsetY + point.y * ratioY;
-            var xPercent = (relativeX / trackRect.width) * 100;
-            var yPercent = (relativeY / trackRect.height) * 100;
+          var relativeX = offsetX + point.x * ratioX;
+          var relativeY = offsetY + point.y * ratioY;
+          var xPercent = (relativeX / trackRect.width) * 100;
+          var yPercent = (relativeY / trackRect.height) * 100;
 
-            eventEl.style.setProperty('--pos', xPercent + '%');
-            eventEl.style.setProperty('--node-anchor', yPercent + '%');
-          });
-        }
+          eventEl.style.setProperty('--pos', xPercent + '%');
+          eventEl.style.setProperty('--node-anchor', yPercent + '%');
+        });
+      }
 
-        function syncAll() {
-          document.querySelectorAll('.timeline-track').forEach(syncTrack);
-        }
+      function syncAll() {
+        document.querySelectorAll('.timeline-track').forEach(syncTrack);
+      }
 
-        function bindWheelScroll() {
-          var timelines = document.querySelectorAll('.timeline');
-          timelines.forEach(function (timeline) {
-            if (timeline.dataset.wheelBound === 'true') return;
-            timeline.dataset.wheelBound = 'true';
-            timeline.addEventListener(
-              'wheel',
-              function (evt) {
-                if (evt.ctrlKey) return;
-                var delta = Math.abs(evt.deltaY) > Math.abs(evt.deltaX) ? evt.deltaY : evt.deltaX;
-                if (delta === 0) return;
+      function bindWheelScroll() {
+        var timelines = document.querySelectorAll('.timeline');
+        timelines.forEach(function (timeline) {
+          if (timeline.dataset.wheelBound === 'true') return;
+          timeline.dataset.wheelBound = 'true';
+          timeline.addEventListener(
+            'wheel',
+            function (evt) {
+              if (evt.ctrlKey) return;
+              var delta = Math.abs(evt.deltaY) > Math.abs(evt.deltaX) ? evt.deltaY : evt.deltaX;
+              if (delta === 0) return;
 
-                var prev = timeline.scrollLeft;
-                var maxScroll = timeline.scrollWidth - timeline.clientWidth;
-                if (maxScroll <= 0) return;
+              var prev = timeline.scrollLeft;
+              var maxScroll = timeline.scrollWidth - timeline.clientWidth;
+              if (maxScroll <= 0) return;
 
-                var next = Math.min(Math.max(prev + delta, 0), maxScroll);
-                timeline.scrollLeft = next;
+              var next = Math.min(Math.max(prev + delta, 0), maxScroll);
+              timeline.scrollLeft = next;
 
-                if (next !== prev) {
-                  evt.preventDefault();
-                }
-              },
-              { passive: false }
-            );
-          });
-        }
+              if (next !== prev) {
+                evt.preventDefault();
+              }
+            },
+            { passive: false }
+          );
+        });
+      }
 
-        function init() {
-          syncAll();
-          bindWheelScroll();
-        }
+      function init() {
+        syncAll();
+        bindWheelScroll();
+      }
 
-        window.addEventListener('resize', syncAll);
-        window.addEventListener('load', init);
-        init();
-      })();
-    </script>
+      window.addEventListener('resize', syncAll);
+      window.addEventListener('load', init);
+      init();
+    })();
+  </script>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
-    var map = L.map('map').setView([15, 0], 2);
+    var map = L.map('map').setView([10, 10], 2);
 
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       maxZoom: 18,
@@ -293,20 +371,19 @@
     }).addTo(map);
 
     var puntos = [
-      { coords: [15, -1], texto: "África Occidental<br>Djembe, sabar, tambores parlantes." },
-      { coords: [28.6, 77.2], texto: "India<br>Tabla, mridangam, ghatam." },
-      { coords: [36, 138], texto: "Japón<br>Taiko: rituales, teatro, festivales." },
-      { coords: [30, 31], texto: "Egipto / Próximo Oriente<br>Percusión ritual ancestral." },
-      { coords: [50, -3], texto: "Reino Unido<br>Evelyn Glennie y la percusión clásica moderna." },
-      { coords: [43.7, -79.4], texto: "Canadá<br>NEXUS: pioneros de la percusión contemporánea." },
-      { coords: [40.4, -3.7], texto: "Europa<br>Timbales, caja, bombo y platillos orquestales." },
-      { coords: [19.4, -99.1], texto: "México / Caribe<br>Congas, bongós, timbales." },
-      { coords: [-12, -77], texto: "Perú<br>Cajón afroperuano." },
-      { coords: [-23, -43], texto: "Brasil<br>Samba y tradiciones afrobrasileñas." },
-      { coords: [29.8, -95.3], texto: "EE. UU.<br>Batería moderna: jazz, rock, funk." }
+      { coords: [34, 40], texto: "Mesopotamia y Anatolia<br>Tambores ceremoniales documentados en tablillas." },
+      { coords: [30, 31], texto: "Egipto<br>Sistro y tambor marco en procesiones religiosas." },
+      { coords: [19, -99], texto: "Mesoamérica<br>Teponaztli y huehuetl en rituales calendáricos." },
+      { coords: [13, -15], texto: "África Occidental<br>Djembe y sabar como lenguaje comunitario." },
+      { coords: [35, 105], texto: "China<br>Tambores de guerra y ópera tradicional." },
+      { coords: [36, 139], texto: "Japón<br>Taiko en templos, festivales y espectáculos modernos." },
+      { coords: [23, 78], texto: "India<br>Tabla y mridangam sostienen ragas hindustani y carnáticos." },
+      { coords: [41, 29], texto: "Estambul<br>Bandas Mehter otomana influye en la percusión europea." },
+      { coords: [40.7, -74], texto: "Nueva York<br>Batería moderna, jazz y hip-hop." },
+      { coords: [22.8, -43.2], texto: "Río de Janeiro<br>Samba, batucadas y carnaval global." }
     ];
 
-    puntos.forEach(function(p) {
+    puntos.forEach(function (p) {
       L.marker(p.coords).addTo(map).bindPopup(p.texto);
     });
   </script>
