@@ -9,131 +9,299 @@
 </head>
 
 <body>
-  <h2>Orígenes geográficos de instrumentos de viento</h2>
+  <header class="page-hero">
+    <p class="hero-label">Atlas sonoro global</p>
+    <h1>Instrumentos de viento</h1>
+    <p class="hero-copy">Vive el viaje de las columnas de aire: de las flautas paleolíticas a los metales sinfónicos y los solos de jazz.</p>
+  </header>
 
-  <div class="timeline">
-    <h3>Línea del tiempo de los instrumentos de viento</h3>
-    <div class="timeline-track">
+  <main class="page-content">
+    <section class="panel-card timeline-panel">
+      <div class="section-heading">
+        <span class="section-kicker">Historia viva</span>
+        <h2>Línea del tiempo de los instrumentos de viento</h2>
+        <p>Una panorámica de flautas, cañas y metales que han guiado ritos, guerras y conciertos.</p>
+      </div>
 
-  <!-- FLAUTAS -->
-  <div class="periodo era-ancient">
-    <span class="periodo-fecha" aria-hidden="true">40.000 a.C. – Prehistoria</span>
-    <h4>c. 40.000 a.C. – Prehistoria (Flautas primitivas)</h4>
-    <ul>
-      <li>Flautas de hueso de animales.</li>
-      <li>Uso en rituales de caza, danzas espirituales y ceremonias comunitarias.</li>
-    </ul>
-  </div>
+      <div class="timeline" aria-label="Línea del tiempo interactiva">
+        <div class="timeline-track">
+      <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f4a261" />
+            <stop offset="25%" stop-color="#2a9d8f" />
+            <stop offset="50%" stop-color="#457b9d" />
+            <stop offset="75%" stop-color="#e76f51" />
+            <stop offset="100%" stop-color="#9b5de5" />
+          </linearGradient>
+        </defs>
+        <path d="M0,260 C120,60 240,360 360,160 S600,360 720,200 960,360 1080,160 1200,320 1200,220" stroke="url(#timelineGradient)" />
+      </svg>
 
-  <div class="periodo era-ancient">
-    <span class="periodo-fecha" aria-hidden="true">3000–500 a.C.</span>
-    <h4>Antiguas civilizaciones (3000–500 a.C.)</h4>
-    <ul>
-      <li>Egipto, Mesopotamia, Grecia: flautas simples y dobles como el aulós.</li>
-      <li>Procesiones religiosas, ritos funerarios, teatro y danzas sagradas.</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-top" style="--pos:4%;" data-progress="0.04">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">40.000 a.C.</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">Prehistoria</span>
+        </div>
+        <div class="periodo era-ancient">
+          <h4>Flautas paleolíticas</h4>
+          <ul>
+            <li>Flautas de hueso talladas en cuevas europeas.</li>
+            <li>Acompañan rituales de caza y celebraciones espirituales.</li>
+            <li>Los intervalos simples marcan los primeros sistemas tonales.</li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="periodo era-medieval">
-    <span class="periodo-fecha" aria-hidden="true">Asia s. VIII–XIII</span>
-    <h4>Asia (siglos VIII–XIII)</h4>
-    <ul>
-      <li>Shakuhachi (Japón): usada por monjes zen para meditación.</li>
-      <li>Bansuri (India): vinculada a Krishna y la música devocional.</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-bottom" style="--pos:14%;" data-progress="0.14">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">3000 a.C.</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">500 a.C.</span>
+        </div>
+        <div class="periodo era-ancient">
+          <h4>Flautas en civilizaciones clásicas</h4>
+          <ul>
+            <li>Egipto, Mesopotamia y Grecia desarrollan flautas simples y dobles.</li>
+            <li>El aulós acompaña tragedias, procesiones y banquetes.</li>
+            <li>Los instrumentos se asocian a dioses como Hermes o Ra.</li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="periodo era-renaissance">
-    <span class="periodo-fecha" aria-hidden="true">Renacimiento / Barroco</span>
-    <h4>Renacimiento y Barroco (siglos XV–XVIII)</h4>
-    <ul>
-      <li>Nace la flauta travesera de madera y su versión barroca.</li>
-      <li>Entra en cortes, bailes nobles y orquestas de cámara.</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-top" style="--pos:24%;" data-progress="0.24">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">Siglos VIII</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">XIII</span>
+        </div>
+        <div class="periodo era-medieval">
+          <h4>Asia espiritual</h4>
+          <ul>
+            <li>Shakuhachi japonesa para meditación zen.</li>
+            <li>Bansuri india asociada al dios Krishna y al bhakti.</li>
+            <li>Escuelas monásticas transmiten técnicas de respiración.</li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="periodo era-classical">
-    <span class="periodo-fecha" aria-hidden="true">Clasicismo – Romanticismo</span>
-    <h4>Clasicismo y Romanticismo (siglos XVIII–XIX)</h4>
-    <ul>
-      <li>Perfeccionamiento del sistema de llaves.</li>
-      <li>La flauta se convierte en instrumento estándar de la orquesta moderna.</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-bottom" style="--pos:34%;" data-progress="0.34">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">Siglos XV</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">XVIII</span>
+        </div>
+        <div class="periodo era-renaissance">
+          <h4>Renacimiento y Barroco</h4>
+          <ul>
+            <li>Nace la flauta travesera de madera con llaves rudimentarias.</li>
+            <li>Integra cortes, ballets y orquestas de cámara.</li>
+            <li>Se generan familias de diferentes registros para consort.</li>
+          </ul>
+        </div>
+      </div>
 
-  <div class="periodo era-modern">
-    <span class="periodo-fecha" aria-hidden="true">Siglos XX–XXI</span>
-    <h4>Siglos XX–XXI</h4>
-    <ul>
-      <li>Uso de flautas en jazz, cine, bandas de viento y música contemporánea.</li>
-      <li>Técnicas modernas: microtonalidad, frullato, efectos extendidos.</li>
-      <li>Fusión con flautas tradicionales (bansuri, shakuhachi, flauta de pan).</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-top" style="--pos:44%;" data-progress="0.44">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">Siglos XVIII</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">XIX</span>
+        </div>
+        <div class="periodo era-classical">
+          <h4>Clasicismo y Romanticismo</h4>
+          <ul>
+            <li>Se perfecciona el sistema de llaves para afinación cromática.</li>
+            <li>La flauta se convierte en instrumento estándar de la orquesta moderna.</li>
+            <li>Virtuosos como Theobald Boehm rediseñan la mecánica.</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- CAÑAS SIMPLES Y DOBLES -->
-  <div class="periodo era-classical">
-    <span class="periodo-fecha" aria-hidden="true">Cañas dobles y simples</span>
-    <h4>Cañas dobles y simples (aulós → oboe, clarinete, fagot)</h4>
-    <ul>
-      <li><strong>Grecia antigua:</strong> aulós usado en tragedias, danzas y rituales.</li>
-      <li><strong>Edad Media – Renacimiento:</strong> caramillos y chirimías para exteriores.</li>
-      <li><strong>Barroco:</strong> oboe y fagot barroco entran en cortes y orquestas.</li>
-      <li><strong>Siglos XVIII–XIX:</strong> nace el clarinete a partir del chalumeau; Mozart lo impulsa.</li>
-      <li><strong>Siglo XX:</strong> clarinete y saxofón dominan el jazz y las big bands.</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-bottom" style="--pos:54%;" data-progress="0.54">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">Siglos XX</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">XXI</span>
+        </div>
+        <div class="periodo era-modern">
+          <h4>Experimentación moderna</h4>
+          <ul>
+            <li>Flautas en jazz, cine, bandas sinfónicas y música contemporánea.</li>
+            <li>Técnicas extendidas: frullato, multifónicos, microtonalidad.</li>
+            <li>Fusión con bansuri, shakuhachi y flautas de pan en escenarios globales.</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- METALES -->
-  <div class="periodo era-medieval">
-    <span class="periodo-fecha" aria-hidden="true">Metales</span>
-    <h4>Metales (cuernos, trompetas, cornetas, trombones, tuba)</h4>
-    <ul>
-      <li><strong>Antigüedad:</strong> cornu, salpinx, tuba romana para órdenes militares.</li>
-      <li><strong>Edad Media:</strong> trompetas naturales en ceremonias reales.</li>
-      <li><strong>Renacimiento – Barroco:</strong> trompeta barroca sin pistones; trompa natural en orquesta.</li>
-      <li><strong>Siglo XIX:</strong> aparecen pistones y válvulas; nace la tuba.</li>
-      <li><strong>Siglo XX:</strong> la trompeta domina el jazz (Armstrong, Miles Davis).</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-top" style="--pos:64%;" data-progress="0.64">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">Aulós</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">Jazz</span>
+        </div>
+        <div class="periodo era-classical">
+          <h4>Cañas simples y dobles</h4>
+          <ul>
+            <li>Del aulós griego a las chirimías medievales.</li>
+            <li>Barroco: oboe y fagot se consolidan en cortes europeas.</li>
+            <li>Siglo XVIII–XIX: nace el clarinete desde el chalumeau; Mozart lo impulsa.</li>
+            <li>Siglo XX: clarinete y saxofón lideran big bands.</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- SAXOFÓN -->
-  <div class="periodo era-modern">
-    <span class="periodo-fecha" aria-hidden="true">Saxofón</span>
-    <h4>Saxofón</h4>
-    <ul>
-      <li><strong>Siglo XIX:</strong> inventado por Adolphe Sax.</li>
-      <li><strong>Siglo XX:</strong> símbolo del jazz y la música moderna (Coltrane, Parker, Getz).</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-bottom" style="--pos:74%;" data-progress="0.74">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">Cuernos</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">Metales</span>
+        </div>
+        <div class="periodo era-medieval">
+          <h4>Metales ceremoniales</h4>
+          <ul>
+            <li>Antigüedad: cornu y salpinx para órdenes militares.</li>
+            <li>Edad Media: trompetas naturales en coronaciones.</li>
+            <li>Renacimiento y Barroco: trompeta sin pistones, trompa natural.</li>
+            <li>Siglo XIX: válvulas y pistones, nace la tuba.</li>
+            <li>Siglo XX: trompeta reina en el jazz (Armstrong, Miles).</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- ÓRGANO -->
-  <div class="periodo era-renaissance">
-    <span class="periodo-fecha" aria-hidden="true">Órgano de tubos</span>
-    <h4>Órgano de tubos</h4>
-    <ul>
-      <li>De los primeros órganos hidráulicos a los órganos medievales.</li>
-      <li>Renacimiento y Barroco: instrumento central del culto cristiano.</li>
-      <li>Siglos XIX–XX: órganos monumentales en catedrales y salas de concierto.</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-top" style="--pos:84%;" data-progress="0.84">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">1840</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">Actualidad</span>
+        </div>
+        <div class="periodo era-modern">
+          <h4>Saxofón</h4>
+          <ul>
+            <li>Inventado por Adolphe Sax para puentes entre cañas y metales.</li>
+            <li>Adoptado por bandas militares y luego por el jazz.</li>
+            <li>Solistas como Parker y Coltrane lo llevan al virtuosismo moderno.</li>
+          </ul>
+        </div>
+      </div>
 
-  <!-- INSTRUMENTOS RITUALES -->
-  <div class="periodo era-ancient">
-    <span class="periodo-fecha" aria-hidden="true">Instrumentos rituales</span>
-    <h4>Instrumentos rituales específicos</h4>
-    <ul>
-      <li><strong>Shofar (Israel antiguo):</strong> cuerno de carnero usado en Rosh Hashaná y Yom Kipur.</li>
-      <li><strong>Flauta de pan:</strong> presente en Europa del Este, Balcanes y Andes; popularizada en el siglo XX.</li>
-      <li><strong>Instrumentos de Tuvá:</strong> igil y flautas vinculadas al canto difónico y prácticas chamánicas.</li>
-      <li><strong>Bansuri y shakuhachi:</strong> símbolos de espiritualidad india y japonesa.</li>
-    </ul>
-  </div>
+      <div class="timeline-event side-bottom" style="--pos:92%;" data-progress="0.92">
+        <div class="timeline-node" tabindex="0">
+          <span class="fecha-superior">Órgano</span>
+          <span class="timeline-node-dot" aria-hidden="true"></span>
+          <span class="fecha-inferior">Rituales</span>
+        </div>
+        <div class="periodo era-renaissance">
+          <h4>Órganos y sonidos rituales</h4>
+          <ul>
+            <li>Órganos hidráulicos y medievales dan paso a los monumentales de catedrales.</li>
+            <li>Shofar, flauta de pan y flautas de Tuvá mantienen usos litúrgicos.</li>
+            <li>El siglo XX populariza estos timbres en grabaciones y giras.</li>
+          </ul>
+        </div>
+      </div>
 
     </div>
-  </div>
+      </div>
 
-  <div id="map"></div>
+      <p class="timeline-hint">🎺 Desplázate horizontalmente o usa la rueda del ratón para seguir la evolución del viento.</p>
+    </section>
+
+    <section class="panel-card map-panel">
+      <div class="section-heading">
+        <span class="section-kicker">Geografía</span>
+        <h2>Mapa de origen y difusión</h2>
+        <p>Sitúa los centros rituales, artesanales y urbanos que catapultaron a cada instrumento.</p>
+      </div>
+
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Mapa interactivo elaborado para el proyecto de historia musical.</p>
+  </footer>
+
+    <script>
+      (function () {
+        function clamp(value, min, max) {
+          return Math.min(Math.max(value, min), max);
+        }
+
+        function syncTrack(track) {
+          var svg = track.querySelector('.timeline-curve');
+          if (!svg) return;
+          var path = svg.querySelector('path');
+          if (!path) return;
+
+          var viewBox = svg.viewBox.baseVal;
+          var pathLength = path.getTotalLength();
+          var trackRect = track.getBoundingClientRect();
+          var svgRect = svg.getBoundingClientRect();
+          var offsetX = svgRect.left - trackRect.left;
+          var offsetY = svgRect.top - trackRect.top;
+          var ratioX = svgRect.width / viewBox.width;
+          var ratioY = svgRect.height / viewBox.height;
+
+          track.querySelectorAll('.timeline-event').forEach(function (eventEl) {
+            var progressAttr = parseFloat(eventEl.dataset.progress);
+            var cssPos = eventEl.style.getPropertyValue('--pos').replace('%', '').trim();
+            var fallbackProgress = cssPos ? parseFloat(cssPos) / 100 : 0;
+            var progress = clamp(isNaN(progressAttr) ? fallbackProgress : progressAttr, 0, 1);
+            var point = path.getPointAtLength(pathLength * progress);
+
+            var relativeX = offsetX + point.x * ratioX;
+            var relativeY = offsetY + point.y * ratioY;
+            var xPercent = (relativeX / trackRect.width) * 100;
+            var yPercent = (relativeY / trackRect.height) * 100;
+
+            eventEl.style.setProperty('--pos', xPercent + '%');
+            eventEl.style.setProperty('--node-anchor', yPercent + '%');
+          });
+        }
+
+        function syncAll() {
+          document.querySelectorAll('.timeline-track').forEach(syncTrack);
+        }
+
+        function bindWheelScroll() {
+          var timelines = document.querySelectorAll('.timeline');
+          timelines.forEach(function (timeline) {
+            if (timeline.dataset.wheelBound === 'true') return;
+            timeline.dataset.wheelBound = 'true';
+            timeline.addEventListener(
+              'wheel',
+              function (evt) {
+                if (evt.ctrlKey) return;
+                var delta = Math.abs(evt.deltaY) > Math.abs(evt.deltaX) ? evt.deltaY : evt.deltaX;
+                if (delta === 0) return;
+
+                var prev = timeline.scrollLeft;
+                var maxScroll = timeline.scrollWidth - timeline.clientWidth;
+                if (maxScroll <= 0) return;
+
+                var next = Math.min(Math.max(prev + delta, 0), maxScroll);
+                timeline.scrollLeft = next;
+
+                if (next !== prev) {
+                  evt.preventDefault();
+                }
+              },
+              { passive: false }
+            );
+          });
+        }
+
+        function init() {
+          syncAll();
+          bindWheelScroll();
+        }
+
+        window.addEventListener('resize', syncAll);
+        window.addEventListener('load', init);
+        init();
+      })();
+    </script>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
@@ -158,7 +326,9 @@
       { coords: [51.7, 94.4], texto: "Tuvá<br>Flautas tradicionales." }
     ];
 
-    puntos.forEach(p => L.marker(p.coords).addTo(map).bindPopup(p.texto));
+    puntos.forEach(function(p) {
+      L.marker(p.coords).addTo(map).bindPopup(p.texto);
+    });
   </script>
 </body>
 </html>
