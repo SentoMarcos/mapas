@@ -1,4 +1,5 @@
 (function () {
+  const isFileProtocol = typeof window !== 'undefined' && window.location && window.location.protocol === 'file:';
   const reduceMotionQuery = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : null;
   let prefersReducedMotion = !!(reduceMotionQuery && reduceMotionQuery.matches);
   if (reduceMotionQuery && typeof reduceMotionQuery.addEventListener === 'function') {
@@ -43,6 +44,7 @@
     let analyser;
     let dataArray;
     let mediaSource;
+    let visualizerDisabled = isFileProtocol;
 
     const resizeCanvas = () => {
       const ratio = window.devicePixelRatio || 1;
@@ -140,21 +142,39 @@
     });
 
     const ensureContext = () => {
-      if (audioCtx || typeof window === 'undefined') {
+      if (visualizerDisabled || audioCtx || typeof window === 'undefined') {
+        return;
+      }
+      const currentSrc = audio.currentSrc || audio.src || '';
+      if (isFileProtocol || currentSrc.startsWith('file:')) {
+        visualizerDisabled = true;
+        console.info('El visualizador se desactiva al abrir los archivos directamente con file:// para evitar errores CORS.');
         return;
       }
       const Context = window.AudioContext || window.webkitAudioContext;
       if (!Context) {
         return;
       }
-      audioCtx = new Context();
-      analyser = audioCtx.createAnalyser();
-      analyser.fftSize = 2048;
-      analyser.smoothingTimeConstant = 0.85;
-      dataArray = new Uint8Array(analyser.fftSize);
-      mediaSource = audioCtx.createMediaElementSource(audio);
-      mediaSource.connect(analyser);
-      analyser.connect(audioCtx.destination);
+      try {
+        audioCtx = new Context();
+        analyser = audioCtx.createAnalyser();
+        analyser.fftSize = 2048;
+        analyser.smoothingTimeConstant = 0.85;
+        dataArray = new Uint8Array(analyser.fftSize);
+        mediaSource = audioCtx.createMediaElementSource(audio);
+        mediaSource.connect(analyser);
+        analyser.connect(audioCtx.destination);
+      } catch (error) {
+        visualizerDisabled = true;
+        if (audioCtx && typeof audioCtx.close === 'function') {
+          audioCtx.close();
+        }
+        audioCtx = undefined;
+        analyser = undefined;
+        dataArray = undefined;
+        mediaSource = undefined;
+        console.warn('El visualizador se desactivó por restricciones del navegador/CORS.', error);
+      }
     };
 
     const drawBaseline = () => {
