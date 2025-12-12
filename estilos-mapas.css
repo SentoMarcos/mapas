@@ -760,11 +760,12 @@ a {
   border-radius: 30px;
   position: relative;
   overflow-x: auto;
-  overflow-y: visible;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   scroll-snap-type: x proximity;
   scrollbar-width: none;
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.35);
+  cursor: grab;
 }
 
 .timeline::-webkit-scrollbar {
@@ -773,9 +774,57 @@ a {
 
 .timeline-track {
   position: relative;
-  width: 2200px;
-  min-height: 600px;
-  padding: clamp(80px, 6vw, 140px) 160px 160px;
+  width: 2400px;
+  min-height: 760px;
+  padding: clamp(200px, 12vw, 320px) 200px clamp(240px, 12vw, 360px);
+  transform: translateY(var(--track-offset-y, 0px));
+  transition: transform 0.25s ease-out;
+}
+.timeline-track::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+  pointer-events: none;
+}
+
+.timeline.is-grabbing .timeline-track {
+  transition: none;
+}
+
+.timeline-reset {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 23, 42, 0.85);
+  color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 4;
+}
+
+.timeline-reset:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.timeline-reset svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .timeline-curve {
@@ -803,7 +852,7 @@ a {
 
 .timeline-event {
   --pos: 0%;
-  --node-gap: 150px;
+  --node-gap: 120px;
   position: absolute;
   top: 0;
   left: var(--pos);
@@ -864,11 +913,21 @@ a {
 }
 
 .timeline-event:hover .periodo,
-.timeline-event:focus-within .periodo {
+.timeline-event:focus-within .periodo,
+.timeline-event.is-open .periodo {
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
   pointer-events: auto;
+}
+
+.timeline.is-grabbing {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.timeline.is-grabbing .timeline-event {
+  pointer-events: none;
 }
 
 .era-ancient { --timeline-color: #f4a261; }

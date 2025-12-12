@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="estilos-mapas.css" />
   <script src="scripts/audio-player.js" defer></script>
+  <script src="scripts/timeline.js" defer></script>
 </head>
 
 <body class="theme-cuerda">
@@ -92,8 +93,13 @@
         </div>
 
         <div class="timeline" aria-label="Línea del tiempo interactiva">
+          <button class="timeline-reset" type="button" aria-label="Volver al inicio">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 5v14M5 12l7-7 7 7" />
+            </svg>
+          </button>
           <div class="timeline-track">
-            <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+            <svg class="timeline-curve" viewBox="0 0 1200 320" preserveAspectRatio="none" aria-hidden="true">
               <defs>
                 <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                   <stop offset="0%" stop-color="#f4a261" />
@@ -103,7 +109,7 @@
                   <stop offset="100%" stop-color="#9b5de5" />
                 </linearGradient>
               </defs>
-              <path d="M0,260 C120,60 240,360 360,160 S600,360 720,200 960,360 1080,160 1200,320 1200,220" stroke="url(#timelineGradient)" />
+              <path d="M0,220 C160,120 320,280 480,180 S800,280 960,180 1120,260 1200,220" stroke="url(#timelineGradient)" />
             </svg>
 
             <div class="timeline-event side-top" style="--pos:4%;" data-progress="0.04">
@@ -333,7 +339,7 @@
         <div class="section-heading">
           <span class="section-kicker">Música</span>
           <h2>Escucha Orfeo</h2>
-          <p>Pasaje diseñado para acompañar la sala de cuerda. Sustituye el archivo en <code>audio/orfeo.mp3</code> para personalizar la experiencia.</p>
+          <p>Pasaje diseñado para acompañar la sala de cuerda. Sustituye el archivo en <code>audio/orfeo - cuerdas.wav</code> para personalizar la experiencia.</p>
         </div>
 
         <div class="audio-showcase">
@@ -357,7 +363,7 @@
               </div>
               <canvas class="audio-wave" width="600" height="140" aria-hidden="true"></canvas>
               <audio preload="metadata">
-                <source src="audio/orfeo.mp3" type="audio/mpeg" />
+                <source src="audio/orfeo - cuerdas.wav" type="audio/wav" />
                 Tu navegador no soporta audio HTML5.
               </audio>
             </div>

@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="estilos-mapas.css" />
   <script src="scripts/audio-player.js" defer></script>
+  <script src="scripts/timeline.js" defer></script>
 </head>
 
 <body class="theme-direccion">
@@ -93,8 +94,13 @@
         </div>
 
         <div class="timeline" aria-label="Línea del tiempo interactiva">
+          <button class="timeline-reset" type="button" aria-label="Volver al inicio">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 5v14M5 12l7-7 7 7" />
+            </svg>
+          </button>
         <div class="timeline-track">
-      <svg class="timeline-curve" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-hidden="true">
+      <svg class="timeline-curve" viewBox="0 0 1200 320" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="timelineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stop-color="#f4a261" />
@@ -104,7 +110,7 @@
             <stop offset="100%" stop-color="#9b5de5" />
           </linearGradient>
         </defs>
-        <path d="M0,260 C120,60 240,360 360,160 S600,360 720,200 960,360 1080,160 1200,320 1200,220" stroke="url(#timelineGradient)" />
+        <path d="M0,220 C160,120 320,280 480,180 S800,280 960,180 1120,260 1200,220" stroke="url(#timelineGradient)" />
       </svg>
 
       <div class="timeline-event side-top" style="--pos:6%;" data-progress="0.06">
@@ -248,38 +254,12 @@
       <div class="panel-inner">
         <div class="section-heading">
           <span class="section-kicker">Experiencia museo con guias</span>
-          <h2>Escucha Apolo y Orfeo</h2>
-          <p>Apolo y Orfeo serán los guias que te guiaran por el museo interactivo, el primero con más profundidad que el segundo.</p>
+          <h2>Escucha a Orfeo</h2>
+          <p>Orfeo será el guia que te acompañará por el museo interactivo con explicaciones claras y accesibles.</p>
           <p>Aquí te mostramos un poco lo que nos contaría el dios griego Orfeo sobre la dirección y los diferentes grupos musicales.</p>
         </div>
 
         <div class="audio-showcase">
-          <article class="audio-player">
-            <h3>Reproductor</h3>
-            <div class="custom-audio" data-track="Apolo">
-              <div class="audio-controls">
-                <button class="audio-toggle" type="button" aria-label="Reproducir Apolo"></button>
-                <div class="audio-info">
-                  <span class="audio-label">Sesión</span>
-                  <strong>Apolo</strong>
-                  <div class="audio-time">
-                    <span class="audio-current">0:00</span>
-                    <span class="audio-separator">/</span>
-                    <span class="audio-duration">0:00</span>
-                  </div>
-                </div>
-              </div>
-              <div class="audio-timeline" role="progressbar" aria-label="Progreso Apolo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
-                <div class="audio-progress"></div>
-              </div>
-              <canvas class="audio-wave" width="600" height="140" aria-hidden="true"></canvas>
-              <audio preload="metadata">
-                <source src="audio/apolo.mp3" type="audio/mpeg" />
-                Tu navegador no soporta audio HTML5.
-              </audio>
-            </div>
-          </article>
-
           <article class="audio-player">
             <h3>Reproductor</h3>
             <div class="custom-audio" data-track="Orfeo">
@@ -300,7 +280,7 @@
               </div>
               <canvas class="audio-wave" width="600" height="140" aria-hidden="true"></canvas>
               <audio preload="metadata">
-                <source src="audio/orfeo.mp3" type="audio/mpeg" />
+                <source src="audio/orfeo - direccion.wav" type="audio/wav" />
                 Tu navegador no soporta audio HTML5.
               </audio>
             </div>
